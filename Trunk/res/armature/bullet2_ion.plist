@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>bullet_harpoon_cell-bullet_harpoon_1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{44,90}}</string>
+                <key>offset</key>
+                <string>{1,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{7,10},{44,90}}</string>
+                <key>sourceSize</key>
+                <string>{56,106}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>bullet_harpoon.png</string>
+            <key>size</key>
+            <string>{64,128}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:808bf9795ee196bbeb91f88c3c98bbaa$</string>
+            <key>textureFileName</key>
+            <string>bullet_harpoon.png</string>
+        </dict>
+    </dict>
+</plist>
