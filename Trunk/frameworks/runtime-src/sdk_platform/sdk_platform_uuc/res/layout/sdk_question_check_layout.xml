@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/sdk_padding_h_max"
+    android:paddingRight="@dimen/sdk_padding_h_max">
+    
+    <TextView
+        android:id="@id/sdk_tv_error_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/sdk_fast_reg_margin_v_dimen"
+        android:layout_marginLeft="@dimen/sdk_fast_reg_margin_h_dimen"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_dimen"
+        android:textColor="@color/color_warn_text"
+        android:textSize="@dimen/sdk_tip_size" />
+    
+    <RelativeLayout 
+        android:id="@+id/sdk_question_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/edit_text_layout_height"
+        android:layout_below="@id/sdk_tv_error_tip"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_max_dimen"
+        android:background="@drawable/sdk_input_bg_gray"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin">
+        <EditText
+            android:id="@id/sdk_et_question"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/input_generic_size"
+            android:focusable="false" >
+        </EditText>
+    </RelativeLayout>
+    
+    <com.uucun.android.passport.layout.InputCommonLayout
+        android:id="@id/common_input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/edit_text_layout_height"
+        android:layout_below="@id/sdk_question_container"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_max_dimen"
+        android:background="@drawable/sdk_input_bg_gray"
+         >
+
+        <EditText
+            android:id="@id/sdk_et_input"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/sdk_btn_clear"
+            android:layout_toRightOf="@id/sdk_tv_passport_tip"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textSize="@dimen/input_generic_size"
+            android:layout_marginLeft="@dimen/sdk_text_margin" >
+        </EditText>
+
+        <ImageView
+            android:id="@id/sdk_btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/sdk_set_clear_code"
+            android:visibility="invisible"
+            android:layout_marginRight="@dimen/sdk_text_margin" />
+    </com.uucun.android.passport.layout.InputCommonLayout>
+
+    <Button
+        android:id="@id/sdk_btn_check_question"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdk_button_height"
+        android:layout_below="@id/common_input_layout"
+        android:background="@drawable/sdk_btn_blue_selector"
+        android:text="@string/sdk_continue"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_button_dimen"
+        android:layout_marginLeft="@dimen/sdk_margin_h_max"
+        android:layout_marginRight="@dimen/sdk_margin_h_max"
+        android:textColor="@color/color_button_text"
+        android:textSize="@dimen/button_generic_size"
+        android:enabled="false" />
+
+</RelativeLayout>

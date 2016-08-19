@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="errcode_success">发送成功</string>
+	<string name="errcode_cancel">登录已取消</string>
+	<string name="errcode_deny">发送被拒绝</string>
+	<string name="errcode_unknown">发送返回</string>
+	
+	<string name="no_release">当前版本非线上发行版，请选用其它登录方式</string>
+	<string name="no_install_wechat">微信客户端未安装，请改用其它登录方式</string>
+
+</resources>

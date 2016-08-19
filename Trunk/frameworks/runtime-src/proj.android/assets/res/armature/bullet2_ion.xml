@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><skeleton frameRate="24" name="bullet1_ion" version="2.1">
+  <armatures>
+    <armature name="bullet1_ion">
+      <b cX="0.9" cY="0.9" kX="0" kY="0" name="3" pX="0" pY="0" x="12.5" y="0.0" z="0">
+        <d name="bullet_harpoon_cell-bullet_harpoon_1" pX="55.75" pY="105.85"/>
+      </b>
+      <b cX="0.9" cY="0.9" kX="0" kY="0" name="2" pX="0" pY="0" x="-15.0" y="0.0" z="1">
+        <d name="bullet_harpoon_cell-bullet_harpoon_1" pX="55.75" pY="105.85"/>
+      </b>
+      <b cX="0.9" cY="0.9" kX="0" kY="0" name="1" pX="0" pY="0" x="-14.75" y="0.0" z="2">
+        <d name="bullet_harpoon_cell-bullet_harpoon_1" pX="55.75" pY="105.85"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations>
+    <animation name="bullet1_ion">
+      <mov dr="28" drTW="28" lp="0" name="bullet1_ion" to="0" twE="NaN">
+        <b dl="0" name="3" sc="1">
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="12.5" cocos2d_y="0.0" dI="0" dr="6" kX="0" kY="0" pX="0" pY="0" twE="0" x="25" y="0" z="0">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+          <f bd="8" cX="1" cY="1" cocos2d_x="0.0" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="0" y="0" z="0">
+            <colorTransform a="0" aM="100" b="0" bM="60" g="0" gM="60" r="0" rM="60"/>
+          </f>
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="-14.75" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="-29.5" y="0" z="0">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+          <f bd="8" cX="1" cY="1" cocos2d_x="0.0" cocos2d_y="0.0" dI="0" dr="1" kX="0" kY="0" pX="0" pY="0" x="0" y="0" z="0"/>
+          <f dI="-1" dr="7"/>
+        </b>
+        <b dl="0" name="2" sc="1">
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="-15.0" cocos2d_y="0.0" dI="0" dr="6" kX="0" kY="0" pX="0" pY="0" twE="0" x="-30" y="0" z="1">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+          <f bd="8" cX="1" cY="1" cocos2d_x="0.0" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="0" y="0" z="1"/>
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="12.75" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="25.5" y="0" z="1">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+          <f bd="8" cX="1" cY="1" cocos2d_x="0.0" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="0" y="0" z="0">
+            <colorTransform a="0" aM="100" b="0" bM="60" g="0" gM="60" r="0" rM="60"/>
+          </f>
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="-15.0" cocos2d_y="0.0" dI="0" dr="1" kX="0" kY="0" pX="0" pY="0" twE="0" x="-30" y="0" z="0">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+        </b>
+        <b dl="0" name="1" sc="1">
+          <f dI="-1" dr="13"/>
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="-14.75" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="-29.5" y="0" z="2">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+          <f bd="8" cX="1" cY="1" cocos2d_x="0.0" cocos2d_y="0.0" dI="0" dr="7" kX="0" kY="0" pX="0" pY="0" twE="0" x="0" y="0" z="1"/>
+          <f bd="8" cX="0.9" cY="0.9" cocos2d_x="12.5" cocos2d_y="0.0" dI="0" dr="1" kX="0" kY="0" pX="0" pY="0" twE="0" x="25" y="0" z="1">
+            <colorTransform a="0" aM="100" b="0" bM="80" g="0" gM="80" r="0" rM="80"/>
+          </f>
+        </b>
+      </mov>
+    </animation>
+  </animations>
+  <TextureAtlas height="256" name="bullet1_ion" width="256">
+    <SubTexture cocos2d_pX="55.75" cocos2d_pY="105.85" height="212" name="bullet_harpoon_cell-bullet_harpoon_1" width="112" x="0" y="0"/>
+  </TextureAtlas>
+</skeleton>

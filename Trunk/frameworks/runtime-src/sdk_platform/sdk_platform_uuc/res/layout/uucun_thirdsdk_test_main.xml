@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+ <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="金额（以分为单位）"/>    
+        
+ <EditText
+        android:id="@+id/thirdpay_sdk_uucun_money"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="金额（以分为单位）"
+        android:singleLine="true"
+        android:inputType="number" 
+        android:text="100"
+        />
+    
+    
+<TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="兑换比例"/>    
+
+<EditText
+        android:id="@+id/thirdpay_sdk_uucun_virtualMoneyOneYuan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="1元对应的虚拟币值"
+        android:singleLine="true"
+        android:inputType="number" 
+        android:text="100"
+        />
+    
+
+    <Button
+        android:id="@+id/thirdpay_sdk_uucun_pay_payBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="支付"/>
+    
+
+</LinearLayout>
+</ScrollView>

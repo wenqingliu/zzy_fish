@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sdk_lv_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sdk_popup_spinner_bg"
+    android:cacheColorHint="@null"
+    android:divider="@color/spinner_listview_divider_color"
+    android:dividerHeight="1dip"
+    android:listSelector="@color/login_spinner_listitem_select_color" >
+
+</ListView>

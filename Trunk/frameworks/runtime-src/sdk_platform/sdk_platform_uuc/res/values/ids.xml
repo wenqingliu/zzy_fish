@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="sdk_content_frame" type="id">false</item>
+    <item name="sdk_main_container" type="id">false</item>
+    <item name="sdk_action_bar" type="id">false</item>
+    <item name="sdk_action_bar_up_pack" type="id">false</item>
+    <item name="sdk_breadcrumb" type="id">false</item>
+    <item name="sdk_navigator_back" type="id">false</item>
+    <item name="sdk_navigator_login" type="id">false</item>
+    <item name="sdk_page_content" type="id">false</item>
+    <item name="sdk_loading_indicator" type="id">false</item>
+    <item name="sdk_empty_loading" type="id">false</item>
+    <item name="sdk_placeholder_loading" type="id">false</item>
+    <item name="sdk_navigator_logout" type="id">false</item>
+    <item name="sdk_generic_frame" type="id">false</item>
+    <item name="sdk_load_text" type="id">false</item>
+    <item name="sdk_title" type="id">false</item>
+    <item name="sdk_content" type="id">false</item>
+    <item name="sdk_message" type="id">false</item>
+    <item name="sdk_negativeButton" type="id">false</item>
+    <item name="sdk_positiveButton" type="id">false</item>
+
+    <!-- new 2.0.0 -->
+    <item name="sdk_navigator_register" type="id">false</item>
+    <item name="sdk_button_container" type="id">false</item>
+
+    <!-- Login fragment -->
+    <item name="user_grid_view" type="id">false</item>
+    <item name="passport_usericon" type="id">false</item>
+    <item name="passport_username" type="id">false</item>
+    <item name="passports_container" type="id">false</item>
+    <item name="grid_viewer" type="id">false</item>
+    <item name="dot_indicator" type="id">false</item>
+    <item name="sdk_left_divider" type="id">false</item>
+    <item name="sdk_right_divider" type="id">false</item>
+    <item name="sdk_tip_container" type="id">false</item>
+    
+    <item name="sdk_btn_spinner" type="id">false</item>
+    <item name="sdk_tv_find_code" type="id">false</item>
+    <item name="sdk_lv_spinner" type="id">false</item>
+
+    <!-- Add new fragment -->
+    <item name="tv_add_tip" type="id">false</item>
+    <item name="sdk_et_username" type="id">false</item>
+    <item name="sdk_et_password" type="id">false</item>
+    <item name="tv_pass_show" type="id">false</item>
+    <item name="sdk_btn_login" type="id">false</item>
+    <item name="tv_forget_pass" type="id">false</item>
+    <item name="sdk_username_contain" type="id">false</item>
+    <item name="sdk_password_contain" type="id">false</item>
+    
+    <item name="tv_login_tip" type="id">false</item>
+
+    <!-- Register fragment -->
+    <item name="sdk_viewpager" type="id">false</item>
+    <item name="pager_title_strip" type="id">false</item>
+    <item name="sdk_btn_register" type="id">false</item>
+    <item name="sdk_tv_agreement" type="id">false</item>
+    <item name="sdk_tv_agreement_tip" type="id">false</item>
+    <item name="tv_register_tip" type="id">false</item>
+    <item name="tv_fee_tip" type="id">false</item>
+    <item name="register_navgater" type="id">false</item>
+    <item name="nav_fast_reg" type="id">false</item>
+    <item name="nav_phone_reg" type="id">false</item>
+    <item name="sdk_connection_container" type="id">false</item>
+    <item name="sdk_nav_divider" type="id">false</item>
+    <item name="register_new_content" type="id">false</item>
+    <item name="register_new_nickname" type="id">false</item>
+    <item name="btn_change_nickname" type="id">false</item>
+    <item name="sdk_code_level_container" type="id">false</item>
+    <item name="sdk_tv_codelevel" type="id">false</item>
+    <item name="sdk_tv_codelevel_tip" type="id">false</item>
+    <item name="sdk_level_container" type="id">false</item>
+    <item name="sdk_iv_level" type="id">false</item>
+    <item name="sdk_btn_phone_reg" type="id">false</item>
+    <item name="sdk_tv_passport_tip" type="id">false</item>
+    <item name="sdk_tv_code_tip" type="id">false</item>
+    <item name="sdk_uu_agreement" type="id">false</item>
+    <item name="sdk_tv_other_account" type="id">false</item>
+    <item name="sdk_btn_other_account" type="id">false</item>
+    <item name="sdk_btn_fast_reg" type="id">false</item>
+
+    <!-- Agreement fragment -->
+	<item name="sdk_btn_confirm" type="id">false</item>
+	<item name="sdk_tv_agreement_content" type="id">false</item>
+	<item name="sdk_title_bar" type="id">false</item>
+	<item name="sdk_agree_content" type="id">false</item>
+	<item name="sdk_close" type="id">false</item>
+	<item name="sdk_divider" type="id">false</item>
+	
+	
+	<!-- Dialog fragment -->
+	<item name="sdk_dialog_title" type="id">false</item>
+	<item name="sdk_tv_username" type="id">false</item>
+	
+	<!-- Setting fragment -->
+	<item name="sdk_detail_icon" type="id">false</item>
+	<item name="sdk_tv_nickname" type="id">false</item>
+	<item name="sdk_tv_appname" type="id">false</item>
+	<item name="passport_container" type="id">false</item>
+	<item name="sdk_tv_nametip" type="id">false</item>
+	<item name="sdk_tv_nicktip" type="id">false</item>
+	<item name="sdk_tv_apptip" type="id">false</item>
+	<item name="sdk_user_detail_container" type="id">false</item>
+	<item name="sdk_set_tip" type="id">false</item>
+	<item name="sdk_code_tip" type="id">false</item>
+	<item name="sdk_code_level" type="id">false</item>
+	<item name="sdk_safe_tip" type="id">false</item>
+	<item name="sdk_safe_level" type="id">false</item>
+	<item name="sdk_btn_update_code" type="id">false</item>
+	<item name="sdk_btn_set_safe" type="id">false</item>
+	<item name="sdk_btn_switch_user" type="id">false</item>
+	<item name="pager_tab_strip" type="id">false</item>
+	<item name="activity_set_bottom" type="id">false</item>
+	<item name="sdk_tv_binded" type="id">false</item>
+	<item name="sdk_switch_user_container" type="id">false</item>
+	
+	<item name="passport_input_layout_confirm" type="id">false</item>
+	<item name="sdk_et_pass_input_confirm" type="id">false</item>
+	<item name="sdk_btn_pass_clear_confirm" type="id">false</item>
+	<item name="sdk_btn_pass_show_confirm" type="id">false</item>
+	
+	<!-- Change pass fragment -->
+	<item name="sdk_et_old_pass" type="id">false</item>
+	<item name="sdk_et_new_pass" type="id">false</item>
+	<item name="sdk_btn_change_pass" type="id">false</item>
+	<item name="sdk_btn_old_pass_deleter" type="id">false</item>
+	<item name="sdk_btn_new_pass_deleter" type="id">false</item>
+	
+	<!-- Set safety fragment -->
+	<item name="sdk_tv_tip" type="id">false</item>
+	<item name="sdk_btn_set_phone" type="id">false</item>
+	<item name="sdk_btn_set_question" type="id">false</item>
+	<item name="sdk_btn_edit_nick" type="id">false</item>
+	<item name="sdk_nick_input_container" type="id">false</item>
+	<item name="sdk_btn_clear_nick" type="id">false</item>
+	<item name="sdk_btn_save_nick" type="id">false</item>
+	
+	<!-- Question check fragment -->
+	<item name="sdk_et_question" type="id">false</item>
+	<item name="sdk_et_answer" type="id">false</item>
+	<item name="sdk_btn_check_question" type="id">false</item>
+	<item name="sdk_btn_question_set" type="id">false</item>
+	
+	<!-- Question answer fragment -->
+	<item name="sdk_sp_all_question" type="id">false</item>
+	<item name="sdk_btn_answer_deleter" type="id">false</item>
+	
+	<!-- Phone set fragment -->
+	<item name="sdk_et_phone_number" type="id">false</item>
+	<item name="sdk_btn_get_verify" type="id">false</item>
+	<item name="sdk_et_verify_code" type="id">false</item>
+	<item name="sdk_btn_check_verify" type="id">false</item>
+	
+	<!-- Find Code fragment -->
+	<item name="sdk_tv_connection" type="id">false</item>
+	
+	<!-- Common view -->
+	<item name="sdk_tv_toast" type="id">false</item>
+	
+	<item name="sdk_et_input" type="id">false</item>
+	<item name="sdk_btn_clear" type="id">false</item>
+	<item name="sdk_et_pass_input" type="id">false</item>
+	<item name="sdk_btn_pass_clear" type="id">false</item>
+	<item name="sdk_btn_pass_show" type="id">false</item>
+	<item name="sdk_et_number_input" type="id">false</item>
+	<item name="sdk_btn_number_clear" type="id">false</item>
+	
+	<item name="divider_horizon" type="id">false</item>
+	
+	<!-- input type -->
+	<item name="common_input_layout" type="id">false</item>
+	<item name="passport_input_layout" type="id">false</item>
+	<item name="number_input_layout" type="id">false</item>
+	
+	<!-- token dialog -->
+	<item name="sdk_dlg_title" type="id">false</item>
+	<item name="sdk_dlg_title_tip" type="id">false</item>
+	<item name="sdk_dlg_content" type="id">false</item>
+	<item name="sdk_dlg_img" type="id">false</item>
+	<item name="sdk_dlg_token_btn_switch" type="id">false</item>
+	<item name="sdk_dlg_icon" type="id">false</item>
+	<item name="sdk_dlg_tip" type="id">false</item>
+	<item name="sdk_dlg_title_container" type="id">false</item>
+	<item name="sdk_dlg_content_container" type="id">false</item>
+	<item name="sdk_dlg_content_process_container" type="id">false</item>
+	<item name="sdk_tv_welcome" type="id">false</item>
+	<item name="sdk_dlg_btn_confirm" type="id">false</item>
+	
+	<!-- Register dialog -->
+	<item name="sdk_dlg_register_tip" type="id">false</item>
+	<item name="sdk_dlg_register_nick_tip" type="id">false</item>
+	<item name="sdk_dlg_register_et_nickname" type="id">false</item>
+	<item name="sdk_dlg_register_btn_change" type="id">false</item>
+	
+	<!-- Login dialog -->
+	<item name="sdk_dlg_error_container" type="id">false</item>
+	<item name="sdk_btn_container" type="id">false</item>
+	<item name="sdk_tv_error_tip" type="id">false</item>
+	<item name="sdk_dlg_add_new" type="id">false</item>
+	<item name="sdk_dlg_cancel" type="id">false</item>
+	
+	<!-- Logout dialog -->
+	<item name="sdk_dlg_check" type="id">false</item>
+	<item name="sdk_dig_btn_set" type="id">false</item>
+	<item name="sdk_btn_logout" type="id">false</item>
+	
+	<!-- change request -->
+	<item name="sdk_btn_register_new" type="id">false</item>
+	<item name="sdk_navigator_switch" type="id">false</item>
+	<item name="sdk_tv_code_level" type="id">false</item>
+	<item name="sdk_safelevel_tip" type="id">false</item>
+	<item name="sdk_tv_code_safe" type="id">false</item>
+	<item name="sdk_bind_container" type="id">false</item>
+	<item name="sdk_question_container" type="id">false</item>
+	
+	<item name="sdk_bind_tip" type="id">false</item>
+	<item name="sdk_bind_phone" type="id">false</item>
+	<item name="sdk_question_tip" type="id">false</item>
+	<item name="sdk_question_level" type="id">false</item>
+	<item name="pass_icon_container" type="id">false</item>
+	<item name="sdk_setted_phone" type="id">false</item>
+	<item name="sdk_question_input" type="id">false</item>
+	<item name="sdk_lv_accounts" type="id">false</item>
+	<item name="sdk_btn_switch" type="id">false</item>
+	<item name="sdk_btn_add_account" type="id">false</item>
+</resources>

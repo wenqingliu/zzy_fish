@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#99000000"
+    tools:context=".TestMainActivity" >
+
+    <!-- 打开小游助手 -->
+
+    <Button
+        android:id="@+id/open_passport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="打开小游助手" />
+
+    <!-- 清除token -->
+
+    <Button
+        android:id="@+id/clearToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="清除token" />
+
+    <!-- 个人中心 -->
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="进入个人中心" />
+
+    <!-- 判断Token -->
+
+    <Button
+        android:id="@+id/checkToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="判断Token" />
+
+    <Button
+        android:id="@+id/getuserinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="获取用户信息" />
+
+    <Button
+        android:id="@+id/loginwithtoken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="使用token登录"
+        android:visibility="gone" />
+	
+    <!-- 游戏充值  -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/recharge_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            android:hint="充值金额（元）" >
+        </EditText>
+
+        <Button
+            android:id="@+id/recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游戏充值" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/userInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="用户信息：" />
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/sdk_user_detail_layout" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/cutoff_line_color" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <!-- 余额 -->
+
+            <RelativeLayout
+                android:id="@+id/sdk_balance_container"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/sdk_tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="left|top"
+                    android:text="@string/balance"
+                    android:textColor="@color/balance_text_color"
+                    android:textSize="@dimen/input_generic_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_balance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/sdk_text_margin_large"
+                    android:duplicateParentState="true"
+                    android:textColor="@color/balance_value_text_color"
+                    android:textSize="@dimen/content_generic_xmedium_size" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/cutoff_line_color" >
+            </View>
+            
+            <!-- 红包 -->
+
+            <RelativeLayout
+                android:id="@+id/sdk_bonus_container"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/sdk_tv_bonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="left|top"
+                    android:text="@string/bonus"
+                    android:textColor="@color/balance_text_color"
+                    android:textSize="@dimen/input_generic_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_bonus_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/bonus_value"
+                    android:drawablePadding="@dimen/sdk_text_margin_large"
+                    android:duplicateParentState="true"
+                    android:textColor="@color/balance_value_text_color"
+                    android:textSize="@dimen/content_generic_xmedium_size" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/cutoff_line_color" >
+            </View>
+
+            <!-- 充值 -->
+
+            <RelativeLayout
+                android:id="@+id/sdk_recharge_container"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="@dimen/sdk_text_margin_large"
+                android:paddingRight="@dimen/sdk_text_margin_large" >
+
+                <TextView
+                    android:id="@+id/sdk_btn_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/sdk_text_margin_large"
+                    android:duplicateParentState="true"
+                    android:text="@string/sdk_recharge"
+                    android:textColor="@color/recharge_btn_text_color"
+                    android:textSize="@dimen/content_generic_xmedium_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/cutoff_line_color" >
+        </View>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,365 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="316dp"
+        android:layout_height="179dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_bg"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/window_close" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/login_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/account_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="@string/oath_login_txt"
+                        android:textColor="@color/leui_oath_account_login_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_text"
+                android:layout_marginTop="28dp" >
+
+                <TextView
+                    android:id="@+id/spinner_text"
+                    android:layout_width="225dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/spinner_text"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="25dp"
+                    android:singleLine="true"
+                    android:text="@string/login_phone_txt"
+                    android:textColor="@color/leui_oath_account_login_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner"
+                android:layout_marginTop="17dp" >
+
+                <LinearLayout
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="135dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/login_button_background"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/login_btn_txt"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_enroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/enroll_button_background"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/enroll_btn_txt"
+                        android:textColor="@color/leui_oath_btn_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/update_access_error_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/update_access_error_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:text="@string/update_access_error_txt"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="18dp"
+                android:layout_below="@id/update_access_error_txt">
+                <Button
+                    android:id="@+id/btn_update_access_error"
+                    android:layout_width="135dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/login_button_background"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:text="@string/update_access_error_btn_txt"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/no_network_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/no_network_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:text="@string/no_network_txt"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/reConnection_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/no_network_txt"
+                android:layout_marginTop="11dp"
+                android:gravity="center_horizontal"
+                android:text="@string/reConnection_txt"
+                android:textColor="@color/leui_oath_reConnection_text"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_below="@id/reConnection_txt"
+                android:layout_marginTop="18dp" >
+
+                <Button
+                    android:id="@+id/btn_no_network_retry"
+                    android:layout_width="135dp"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/login_button_background"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/reConnection_btn_txt"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/network_not_good_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="@string/network_not_good_text"
+            android:textColor="@color/leui_oath_account_login_text"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/login_error_quit_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="@string/login_error_quit"
+            android:textColor="@color/leui_oath_account_login_text"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/accessToken_expire_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/accessToken_expire_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:text="@string/access_token_expire"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_margin="18dp"
+                android:layout_below="@id/accessToken_expire_txt">
+                <Button
+                    android:id="@+id/btn_accessToken_expire"
+                    android:layout_width="135dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/login_button_background"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:text="@string/login_error_txt2"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_failure_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/login_error_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/login_error_txt1"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_error_txt"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/login_error_txt2"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reLogin_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/login_failure_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:text="@string/login_failure_txt"
+                android:textColor="@color/leui_oath_account_login_text"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_below="@id/login_failure_txt"
+                android:layout_marginTop="37dp" >
+
+                <Button
+                    android:id="@+id/try_again_btn"
+                    android:layout_width="135dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/login_button_background"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/reConnection_btn_txt"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/login_tip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="@string/login_phone_txt"
+            android:textColor="@color/text_color_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/login_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/login_ing_txt"
+            android:textColor="@color/text_color_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

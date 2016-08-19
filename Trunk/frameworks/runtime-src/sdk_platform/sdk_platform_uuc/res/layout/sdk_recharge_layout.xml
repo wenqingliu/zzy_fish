@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/sdk_balance_container_height"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/sdk_set_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/sdk_text_margin_large"
+                android:text="@string/sdk_account_balance"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+
+            <TextView
+                android:id="@+id/sdk_tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sdk_set_item_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/sdk_text_margin_large"
+                android:paddingRight="@dimen/sdk_text_margin_large"
+                android:text="@string/sdk_account_balance_value"
+                android:textColor="@color/balance_value_text_color"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sdk_recharge_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/sdk_balance_container_height"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/sdk_set_item_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/sdk_text_margin_large"
+                android:text="@string/sdk_recharge_amount"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+
+            <com.uucun.android.passport.layout.MoneyEditText
+                android:id="@+id/sdk_ed_recharge_amount"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical|right"
+                android:inputType="number"
+                android:maxLength="15"
+                android:maxWidth="130dip"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:text="@string/sdk_recharge_default_amount"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sdk_set_h_container_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/sdk_text_margin_large"
+                android:text="@string/sdk_recharge_unit"
+                android:textColor="@color/color_font_gray"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sdk_btn_recharge"
+            style="@style/common_button_solid_blue_style"
+            android:layout_marginLeft="@dimen/sdk_margin_h_max"
+            android:layout_marginRight="@dimen/sdk_margin_h_max"
+            android:layout_marginTop="@dimen/sdk_margin_h_max"
+            android:text="@string/sdk_recharge" />
+    </LinearLayout>
+
+</ScrollView>

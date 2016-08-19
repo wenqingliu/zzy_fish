@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/loft_newpagehand" >
+
+        <ImageButton
+            android:id="@+id/loft_thirdSDK_back"
+            android:layout_width="48.5dip"
+            android:layout_height="25.8dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="#00000000"
+            android:src="@drawable/loft_thirdsdk_backbutton_selector" />
+    </RelativeLayout>
+
+    <!-- 支付信息界面 -->
+
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="103dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/loft_thirdSDK_title" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/loft_thridlogo" />
+    </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/loft_thirdSDK_note"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/loft_thirdSDK_buttonView"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp" >
+
+           <TextView
+               android:id="@+id/loft_thirdSDK_prompt"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="left"
+               android:text="@string/help_dialog_text"
+               android:textColor="@color/TextColorBlack"
+               android:textSize="15sp" />
+
+       </RelativeLayout>
+
+</RelativeLayout>

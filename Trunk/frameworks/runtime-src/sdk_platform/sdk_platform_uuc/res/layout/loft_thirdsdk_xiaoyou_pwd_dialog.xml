@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/notitle"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/loft_thirdsdk_game_grid_bg"
+    android:minHeight="@dimen/loft_sdk_alert_dialog_height" >
+
+    <TextView
+            android:id="@+id/sdk_tv_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/uucun_thirdpay_white"
+            android:background="@drawable/loft_newpagehand"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:paddingTop="10dp"/>
+    <LinearLayout
+        android:layout_below="@id/sdk_tv_title"
+        android:id="@+id/input_password_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <com.loft.thirdsdk.activity.LoftPayPasswordView
+            android:id="@+id/sdk_ed_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="0dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/input_password_layout"
+        android:layout_marginTop="50dp" >
+
+        <Button
+            android:id="@+id/sdk_btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/pwd_cancel"
+            android:text="@string/uucun_thirdpay_cancel"
+            android:textColor="@color/uucun_thirdpay_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sdk_btn_confirm"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/pwd_sure"
+            android:text="@string/uucun_thirdpay_ok"
+            android:textColor="@color/uucun_thirdpay_white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+     <Button
+         android:id="@+id/Findpwdbutton"
+         android:layout_width="60dip"
+         android:layout_height="20dip"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/input_password_layout"
+         android:layout_marginRight="16dp"
+          android:background="@color/uucun_thirdpay_trans"
+         android:layout_marginTop="21dp"
+          android:textColor="@color/loftThirdSDKButtonColor"
+         android:textSize="@dimen/loft_thirdpay_prompt_size"
+         android:text="忘记密码?" />
+
+</RelativeLayout>

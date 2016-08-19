@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.hjwl.newox.mi"
+    android:versionCode="20160704"
+      android:versionName="3.2.4" >
+
+    <uses-sdk android:minSdkVersion="9"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.Black.NoTitleBar">
+		
+		<!-- 自定义渠道标识，请记得修改，值一般为登录类型值(登录类型见SDKControlOriginal.java)	-->
+	     <meta-data android:name="sdk_platform" android:value="9" /> 
+        
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data android:name="android.app.lib_name" android:value="cocos2dlua"/>
+
+        <activity android:configChanges="orientation|keyboardHidden|screenSize|navigation" 
+            android:launchMode="standard"
+            android:label="@string/app_name" android:name="org.cocos2dx.lua.AppActivity" 
+            android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- QQ回调 -->
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1104540804"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.plus.ImageActivity"/>
+        <activity android:configChanges="orientation|keyboardHidden|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- QQ-END -->
+
+
+        <!-- 支付宝-start -->
+        <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind">
+        </activity>
+        <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="behind">
+        </activity>
+        <!-- 支付宝-end -->
+
+
+        <!-- 友盟 -->
+        <activity android:label="@string/app_name" android:name=".UmengHome">
+        </activity>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity android:configChanges="orientation|keyboard" android:launchMode="singleTask" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@style/Theme.UMDialog" android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity>
+
+        <!-- 微信分享activity注册 -->
+        <activity android:configChanges="orientation|keyboardHidden|screenSize|navigation" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data android:name="UMENG_APPKEY" android:value="561e0023e0f55a8eea000980">
+        </meta-data>
+    	<meta-data android:value="mi" android:name="UMENG_CHANNEL"/>
+
+        <!-- JPush Start -->
+        <!-- Required SDK核⼼功能-->
+		<activity
+			android:name="cn.jpush.android.ui.PushActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.ui.PushActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="com.hjwl.newox.mi" />
+			</intent-filter>
+		</activity>
+		<!-- Required SDK核⼼功能-->
+		<service
+			android:name="cn.jpush.android.service.DownloadService"
+			android:enabled="true"
+			android:exported="false" >
+		</service>
+		<!-- Required SDK 核⼼功能-->
+		<!-- option since 2.0.5 可配置android:process 参数将PushService设置为独⽴进程 -->
+		<service
+			android:name="cn.jpush.android.service.PushService"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTER" />
+				<action android:name="cn.jpush.android.intent.REPORT" />
+				<action android:name="cn.jpush.android.intent.PushService" />
+				<action android:name="cn.jpush.android.intent.PUSH_TIME" />
+			</intent-filter>
+		</service>
+		<!-- Required SDK 核⼼功能 since 1.8.0 -->
+		<service
+			android:name="cn.jpush.android.service.DaemonService"
+			android:enabled="true"
+			android:exported="true">
+		<intent-filter >
+		<action android:name="cn.jpush.android.intent.DaemonService" />
+		<category android:name="com.hjwl.newox.mi"/>
+		</intent-filter>
+		</service>
+		<!-- Required SDK核⼼功能-->
+		<receiver
+			android:name="cn.jpush.android.service.PushReceiver"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter android:priority="1000">
+			<action
+				android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!--Required 显⽰通知栏 -->
+				<category android:name="com.hjwl.newox.mi" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<!-- Optional -->
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<data android:scheme="package" />
+			</intent-filter>
+		</receiver>
+		<!-- Required SDK核⼼功能-->
+		<receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+		<!-- User defined. ⽤户⾃定义的⼲播接收器-->
+		<receiver
+          android:name="com.hjwl.newox.jpush.MyReceiver"
+          android:exported="false"
+          android:enabled="true">
+          <intent-filter>
+              <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+              <category android:name="com.hjwl.newox.mi" />
+          </intent-filter>
+     	 </receiver>
+		<!-- Required . Enable it you can get statistics data with channel -->
+		<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+		<meta-data android:name="JPUSH_APPKEY" android:value="b2b4cf47437b8eb57a1849d9" />
+        <!-- JPush End -->
+    </application>
+
+    <!-- JPush start -->
+    <!-- Required ⾃定义⽤来收发消息的相关权限 -->
+  	<!--JPush-permission-start
+  	<permission
+		android:name="com.hjwl.newox.mi.permission.JPUSH_MESSAGE"
+		android:protectionLevel="signature" /> 
+	JPush-permission-end-->
+		
+  	<uses-permission android:name="com.hjwl.newox.mi.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+	<!-- JPush end -->
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT" />
+
+</manifest>

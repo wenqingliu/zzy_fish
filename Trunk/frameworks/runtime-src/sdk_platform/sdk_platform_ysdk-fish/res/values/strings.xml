@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">海盗捕鱼</string>
+    <string name="exit_game_que">你确定退出游戏吗?</string>
+    <string name="tv_tips">提示</string>
+    <string name="tv_ok">确定</string>
+    <string name="tv_cancel">取消</string>
+</resources>

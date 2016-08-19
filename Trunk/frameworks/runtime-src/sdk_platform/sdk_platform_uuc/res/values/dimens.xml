@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="uucun_thirdpay_content_size">11.0sp</dimen>
+    <dimen name="loft_thirdpay_prompt_size">11.0sp</dimen>
+    <dimen name="loft_thirdpay_paytype_size">13.0sp</dimen>
+    <dimen name="loft_thirdpay_money_size">14.0sp</dimen>
+    <dimen name="loft_thirdpay_title_size">17.0sp</dimen>
+    <dimen name="loft_thirdpay_payMoney">19.0sp</dimen>
+    <!-- input password box -->
+    <dimen name="loft_default_ev_border_width">5dp</dimen>
+    <dimen name="loft_default_ev_border_radius">3dp</dimen>
+    <dimen name="loft_default_ev_password_width">10dp</dimen>
+    <dimen name="loft_default_ev_password_radius">3dp</dimen>
+    <dimen name="loft_sdk_alert_dialog_width">210dip</dimen>
+    <dimen name="loft_sdk_alert_dialog_height">92dip</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

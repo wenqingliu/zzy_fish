@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 版本信息 -->
+
+        <LinearLayout
+            android:id="@+id/sdk_version_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/about_info_height"
+            android:background="@color/about_version_bg_color"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/sdk_iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/sdk_logo_large" />
+
+            <TextView
+                android:id="@+id/sdk_tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sdk_uassist_version"
+                android:textColor="@color/about_version_text_color"
+                android:textSize="@dimen/common_generic_size" />
+        </LinearLayout>
+
+        <!-- 隐私保护声明 -->
+
+        <RelativeLayout
+            android:id="@+id/sdk_privacy_protect_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_container_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/contact_info_margin_small"
+            android:layout_marginRight="@dimen/contact_info_margin_small"
+            android:layout_marginTop="@dimen/container_margin_top"
+            android:background="@drawable/sdk_set_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/contact_info_margin_medium"
+                android:text="@string/sdk_privacy_declear"
+                android:textColor="@color/container_text_color"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/contact_info_margin_medium"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/sdk_arrow_right" />
+        </RelativeLayout>
+
+        <!-- 用户服务协议 -->
+
+        <RelativeLayout
+            android:id="@+id/sdk_user_service_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_container_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/contact_info_margin_small"
+            android:layout_marginRight="@dimen/contact_info_margin_small"
+            android:layout_marginTop="@dimen/info_text_line_space"
+            android:background="@drawable/sdk_set_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/contact_info_margin_medium"
+                android:text="@string/sdk_user_service_protocol"
+                android:textColor="@color/container_text_color"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/contact_info_margin_medium"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/sdk_arrow_right" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sdk_contact_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/contact_info_margin_large"
+            android:layout_marginRight="@dimen/contact_info_margin_large"
+            android:layout_marginTop="@dimen/contact_info_margin_large"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sdk_contact_method"
+                android:textColor="@color/contact_info_text_color"
+                android:textSize="@dimen/common_generic_size" />
+
+            <TextView
+                android:id="@+id/sdk_tv_customer_service_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/contact_info_margin_medium"
+                android:text="@string/sdk_customer_service_phone"
+                android:textColor="@color/contact_info_text_color"
+                android:textSize="@dimen/common_generic_size" />
+
+            <TextView
+                android:id="@+id/sdk_tv_qq_group_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/contact_info_margin_medium"
+                android:text="@string/sdk_qq_group"
+                android:textIsSelectable="true"
+                android:textColor="@color/contact_info_text_color"
+                android:textSize="@dimen/common_generic_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/loft_newpagehand">
+
+        <ImageButton
+            android:id="@+id/loft_thirdSDK_back"
+            android:layout_width="48.5dip"
+            android:layout_height="25.8dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="#00000000"
+            android:src="@drawable/loft_thirdsdk_backbutton_selector" />
+
+        <TextView
+            android:id="@+id/loft_thirdSDK_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="用户帮助"
+            android:textColor="#fdffff"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+    
+    <!-- 支付信息界面 -->
+
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_payInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.5dip"
+        android:layout_marginRight="10.5dip"
+        android:layout_below="@id/loft_thirdSDK_title"
+        android:layout_marginTop="9.8dip"
+        android:background="@drawable/loft_newthirdsdk_content_bg" >
+
+        <TextView
+            android:id="@+id/loft_thirdSDK_payMoneyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/loftThirdSDKMoneyHintColor" 
+            android:text="道具名称 :  "
+            android:textSize="@dimen/loft_thirdpay_paytype_size"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="7dip"
+            android:layout_marginTop="10.8dip"
+            android:layout_marginBottom="9.8dip"
+            />
+        
+        <TextView
+            android:id="@+id/loft_thirSDK_productText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loft_thirdSDK_payMoneyText"
+            android:textColor="@color/loftThirdSDKMoneyHintColor" 
+            android:text="道具金额 :  "
+            android:textSize="@dimen/loft_thirdpay_paytype_size"
+            android:layout_alignRight="@id/loft_thirdSDK_payMoneyText"
+            android:layout_marginTop="10.8dip"
+            android:layout_marginBottom="9.8dip"
+            />
+        
+          <TextView
+              android:id="@+id/loft_thirdSDK_money"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/loft_thirdSDK_payMoneyText"
+              android:layout_marginBottom="9.8dip"
+              android:layout_marginTop="5dip"
+              android:layout_toRightOf="@id/loft_thirSDK_productText"
+              android:text="20元"
+              android:textColor="#ff6a06"
+              android:textSize="@dimen/loft_thirdpay_payMoney" />
+
+          <TextView 
+              android:layout_width="wrap_content"
+              android:layout_height="1dip"
+              android:layout_below="@id/loft_thirdSDK_money"
+              android:visibility="invisible"/>
+
+          <TextView
+              android:id="@+id/loft_thirSDK_productInfoText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBaseline="@+id/loft_thirdSDK_payMoneyText"
+              android:layout_alignBottom="@+id/loft_thirdSDK_payMoneyText"
+              android:layout_alignLeft="@+id/loft_thirdSDK_money"
+              android:text="道具名称"
+              android:textColor="#FF000000"
+              android:textSize="@dimen/loft_thirdpay_paytype_size" />
+
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/loft_thirdSDK_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/loft_thirdSDK_payInfo"
+        android:layout_alignRight="@+id/loft_thirdSDK_payInfo"
+        android:layout_below="@id/loft_thirdSDK_payInfo"
+        android:layout_marginTop="13.1dip"
+        android:text="● 请选择支付方式进行支付"
+        android:textColor="@color/loftThirdSDKPromptColor"
+        android:textSize="@dimen/loft_thirdpay_prompt_size" />
+
+  
+   
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="103dip"
+        android:layout_alignLeft="@+id/loft_thirdSDK_prompt"
+        android:layout_alignRight="@+id/loft_thirdSDK_payInfo"
+        android:layout_below="@+id/loft_thirdSDK_prompt"
+        android:layout_alignParentBottom="true">
+        <ListView
+        android:id="@+id/loft_thirdSDK_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loft_newlistviewboud"
+        android:divider="@drawable/loft_newlistviewline"
+        android:layout_marginBottom="40dp"
+        android:listSelector="@drawable/loft_thirdsdk_paytypelist_selector" >
+    </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

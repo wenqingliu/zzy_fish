@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent" >
+
+    <TextView
+        android:id="@+id/sdk_tv_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sdk_text_margin"
+        android:textColor="@color/color_username_password"
+        android:textSize="@dimen/common_generic_size" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/sdk_delete_user"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sdk_switch_user_item_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:contentDescription="@string/content_description"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:src="@drawable/sdk_btn_delete"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/game_grid_bg" >
+    
+    <include
+        android:id="@+id/network_error_id"
+        layout="@layout/error_status_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/retry_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/resources_progress_overlay"
+        android:visibility="gone" />
+    
+    <RelativeLayout android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/game_grid_bg" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/game_text_title"
+            android:text="@string/sdk_game_title"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/game_topbar"/>
+    </RelativeLayout>
+    
+    <GridView
+        android:id="@+id/game_gridview"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:numColumns="3"
+        android:background="@drawable/game_grid_bg"
+        android:listSelector="#00000000" >
+    </GridView>
+    
+    <RelativeLayout android:id="@+id/game_null"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@drawable/game_grid_bg">
+        <TextView
+            android:id="@+id/game_tv_null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_centerInParent="true"
+            android:textColor="@color/user_info_value"
+            android:textSize="16sp"
+            android:textIsSelectable="true"
+            android:lineSpacingExtra="6dp">
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>

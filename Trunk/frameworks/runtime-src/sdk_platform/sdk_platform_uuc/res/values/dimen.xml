@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="sdk_button_height">30dp</dimen>
+    <dimen name="sdk_button_height_m">40dp</dimen>
+    <dimen name="sdk_button_medium_height">45dp</dimen>
+    <dimen name="button_margin">5dp</dimen>
+    <dimen name="text_margin">2dp</dimen>
+    <dimen name="text_line_space">2dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="edittext_height">30dp</dimen>
+    <dimen name="edittext_margin">5dp</dimen>
+    <dimen name="edittext_text_size">14sp</dimen>
+    <dimen name="custom_toast_text_height">55dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_horizontal">12dp</dimen>
+    <dimen name="margin_vertical">8dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_min">5dp</dimen>
+    <dimen name="margin_large">15dp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_horizontal">15dp</dimen>
+    <dimen name="padding_vertical">15dp</dimen>
+
+    <!-- Font size -->
+    <dimen name="action_bar_font_size">20sp</dimen>
+    <dimen name="action_bar_font_small_size">17sp</dimen>
+    <dimen name="sdk_title_bar_font_size">12sp</dimen>
+    <dimen name="common_generic_size">14sp</dimen>
+    <dimen name="input_generic_size">12sp</dimen>
+    <dimen name="button_generic_size">14sp</dimen>
+    <dimen name="button_large_size">16sp</dimen>
+    <dimen name="button_small_size">8sp</dimen>
+    <dimen name="toggle_text_size">16sp</dimen>
+    <dimen name="sdk_tip_size">11sp</dimen>
+    <dimen name="sdk_alert_dialog_size">13sp</dimen>
+    <dimen name="sdk_alert_dialog_button_font_size">14sp</dimen>
+
+    <!-- UI size -->
+    <dimen name="edit_text_layout_height">25dp</dimen>
+    <dimen name="edit_inner_btn_height">32dp</dimen>
+    <dimen name="action_bar_height">47dp</dimen>
+    <dimen name="action_btn_height">34dp</dimen>
+    <dimen name="sdk_set_h_container_height">38dip</dimen>
+    <dimen name="sdk_balance_container_height">50dip</dimen>
+    <dimen name="bonus_bg_vertical">250dip</dimen>
+    <dimen name="bonus_bg_landscape">100dip</dimen>
+    <dimen name="bonus_code_vertical">120dip</dimen>
+    <dimen name="bonus_code_landscape">15dip</dimen>
+
+    <!-- other font size -->
+    <dimen name="content_generic_xmedium_size">18sp</dimen>
+    <dimen name="content_generic_medium_size">16sp</dimen>
+    <dimen name="content_generic_small_size">10sp</dimen>
+    <dimen name="content_generic_xsmall_size">12sp</dimen>
+    <dimen name="content_entry_large_size">20sp</dimen>
+    <dimen name="content_entry_medium_size">16sp</dimen>
+    <dimen name="content_entry_small_size">13sp</dimen>
+    <dimen name="info_text_line_space">2dip</dimen>
+
+    <!-- Login fragment -->
+    <dimen name="passport_icon_width">64dp</dimen>
+    <dimen name="passport_icon_height">64dp</dimen>
+    <dimen name="passport_large_icon_width">70dp</dimen>
+    <dimen name="passport_large_icon_height">70dp</dimen>
+    <dimen name="input_layout_margin">20dp</dimen>
+    <dimen name="input_layout_height">45dp</dimen>
+    <dimen name="login_dialog_width">285dp</dimen>
+    <dimen name="login_btn_width">115dp</dimen>
+    <dimen name="login_btn_height">37dp</dimen>
+    <dimen name="register_code_height">30dp</dimen>
+    <dimen name="verify_code_image_width">75dp</dimen>
+    <dimen name="verify_code_image_height">45dp</dimen>
+
+    <!-- dialog dimen -->
+    <dimen name="sdk_dialog_btn_height">46dp</dimen>
+    <dimen name="sdk_dlg_content_text_size">16sp</dimen>
+    <dimen name="sdk_dialog_auto_login_height">60dp</dimen>
+    <dimen name="sdk_dialog_auto_login_width">100dp</dimen>
+
+    <!-- UI check -->
+    <dimen name="sdk_input_drawable_margin">5dp</dimen>
+    <dimen name="sdk_text_margin">10dp</dimen>
+    <dimen name="sdk_text_margin_large">14dp</dimen>
+
+    <!-- Error View -->
+    <dimen name="sdk_refresh_btn_width">70dp</dimen>
+    <dimen name="sdk_refresh_btn_height">35dp</dimen>
+
+    <!-- Network Error dialog -->
+    <dimen name="network_error_text_tip_size">16sp</dimen>
+
+    <!-- activity image -->
+    <dimen name="sdk_recommend_activity_img_height">146dp</dimen>
+    <dimen name="sdk_normal_activity_image_height">80dp</dimen>
+    <dimen name="sdk_activity_image_width_px">600px</dimen>
+    <dimen name="sdk_activity_image_landscape_width_px">760px</dimen>
+
+    <!-- passport 3.0 dimen -->
+    <dimen name="sdk_fast_reg_margin_h_dimen">12dip</dimen>
+    <dimen name="sdk_fast_reg_margin_v_dimen">7dip</dimen>
+    <dimen name="sdk_alert_dialog_margin_v_dimen">15dip</dimen>
+    <dimen name="sdk_fast_reg_margin_v_max_dimen">15dip</dimen>
+    <dimen name="sdk_fast_reg_margin_v_min_dimen">2dip</dimen>
+    <dimen name="sdk_fast_reg_margin_v_button_dimen">30dip</dimen>
+    <dimen name="sdk_padding_h_max">20dip</dimen>
+    <dimen name="sdk_margin_h_max">40dip</dimen>
+    <dimen name="sdk_agreement_title_h">38dip</dimen>
+    <dimen name="sdk_switch_user_margin">15dip</dimen>
+    <dimen name="sdk_switch_user_item_height">30dip</dimen>
+    <dimen name="sdk_switch_user_popup_height">90dip</dimen>
+
+    <!-- alert dialog -->
+    <dimen name="sdk_alert_dialog_width">210dip</dimen>
+    <dimen name="sdk_alert_dialog_height">92dip</dimen>
+
+    <!-- dialog fragment -->
+    <dimen name="sdk_dialog_fragment_width_land">285dip</dimen>
+    <dimen name="sdk_dialog_fragment_width_port">285dip</dimen>
+    <dimen name="sdk_dialog_fragment_height_port">320dip</dimen>
+    <dimen name="sdk_dialog_fragment_width_land_register">320dip</dimen>
+    <dimen name="sdk_dialog_fragment_height_land_register">290dip</dimen>
+    <dimen name="sdk_set_container_margin_large">26dip</dimen>
+    <dimen name="sdk_set_container_margin_small">2dip</dimen>
+
+    <!-- input password box -->
+    <integer name="default_ev_password_length">6</integer>
+
+    <dimen name="default_ev_border_width">1dp</dimen>
+    <dimen name="default_ev_border_radius">3dp</dimen>
+    <dimen name="default_ev_password_width">10dp</dimen>
+    <dimen name="default_ev_password_radius">3dp</dimen>
+
+    <!-- about us -->
+    <dimen name="about_info_height">140dp</dimen>
+    <dimen name="common_container_height">50dp</dimen>
+    <dimen name="container_margin_top">7dp</dimen>
+    <dimen name="contact_info_margin_large">25dp</dimen>
+    <dimen name="contact_info_margin_medium">15dp</dimen>
+    <dimen name="contact_info_margin_small">10dp</dimen>
+
+    <!-- order detail -->
+    <dimen name="about_detail_margin_large">18dp</dimen>
+    <dimen name="about_detail_margin_medium">15dp</dimen>
+    <dimen name="about_detail_margin_small">12dp</dimen>
+
+    <!-- divider -->
+    <dimen name="divider_margin_top">15dp</dimen>
+	
+	<!-- register success -->
+    <dimen name="sdk_register_tip_height">80dp</dimen>
+
+</resources>

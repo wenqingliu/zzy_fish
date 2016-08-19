@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ContentFrame">
+        <attr name="content" format="reference" />
+        <attr name="contentId" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="UUPasswordInputView">
+        <attr name="uBorderWidth" format="dimension" />
+        <attr name="uBorderColor" format="color" />
+        <attr name="uBorderRadius" format="dimension" />
+        <attr name="uPasswordLength" format="integer" />
+        <attr name="uPasswordWidth" format="dimension" />
+        <attr name="uPasswordColor" format="color" />
+        <attr name="uPasswordRadius" format="dimension" />
+    </declare-styleable>
+    
+    
+     <declare-styleable name="EditText"> 
+        <!-- 总共输入长度 --> 
+        <attr name="totalLength" format="integer" /> 
+        <!-- 每组的长度 --> 
+        <attr name="eachLength" format="integer" /> 
+        <!-- 分隔符 --> 
+        <attr name="delimiter" format="string" /> 
+        <!-- 占位符 --> 
+        <attr name="placeHolder" format="string" /> 
+    </declare-styleable> 
+     <declare-styleable name="loft_PasswordInputView">
+     <attr name="loft_borderWidth" format="dimension" /> 
+     <attr name="loft_borderColor" format="color" /> 
+     <attr name="loft_borderRadius" format="dimension" /> 
+     <attr name="loft_passwordLength" format="integer" /> 
+     <attr name="loft_passwordWidth" format="dimension" /> 
+     <attr name="loft_passwordColor" format="color" /> 
+      <attr name="loft_passwordRadius" format="dimension" /> 
+     </declare-styleable>
+
+</resources>

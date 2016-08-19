@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F1F3" >
+
+    <TextView
+        android:id="@+id/error_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/sdk_green_gray"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <com.letv.letvsdk.widget.LeListView
+        android:id="@+id/coupon_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/sdk_transparent"
+        android:cacheColorHint="@color/sdk_transparent"
+        android:clickable="false"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="#00000000"
+        android:dividerHeight="4dp"
+        android:listSelector="@color/sdk_transparent"
+        android:scrollingCache="false" />
+
+</RelativeLayout>

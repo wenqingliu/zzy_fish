@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jt.newox360"
+    android:versionCode="20160704"
+    android:versionName="3.2.4" >
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        
+        <!-- 自定义渠道标识，请记得修改，值一般为登录类型值(登录类型见SDKControlOriginal.java)	-->
+	     <meta-data android:name="sdk_platform" android:value="6" /> 
+
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="cocos2dlua" />
+
+        <activity
+            android:name="org.cocos2dx.lua.AppActivity"
+            android:launchMode="standard"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- QQ回调 -->
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1104540804"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.plus.ImageActivity"/>
+        <activity android:configChanges="orientation|keyboardHidden|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- QQ-END -->
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- alipay sdk end -->
+
+        <!-- 微信支付界面-->
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.junnet.heepay.ui.activity.WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.junnet.heepay.ui.activity.WechatPaymentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.ipaynow.plugin.activity.PayMethodActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <!-- payment activities end -->
+
+
+
+        <!-- 友盟 -->
+        <activity
+            android:name=".UmengHome"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 微信分享activity注册 -->
+        <activity
+            android:name="com.hjwl.newox360.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="561e0023e0f55a8eea000980" >
+        </meta-data>
+		<meta-data android:value="qihu360" android:name="UMENG_CHANNEL"/>
+        
+        
+        <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity
+            android:name="com.qihoo.gamecenter.sdk.activity.ContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="true">
+        </activity>
+
+        
+        <!-- payment activities begin -->
+        <!-- 添加360SDK必需的activity：com.qihoopp.qcoinpay.QcoinActivity -->
+        <activity
+            android:name="com.qihoopp.qcoinpay.QcoinActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
+
+        
+
+        <!-- 如下是360游戏实时推送SDK必要声明，不可修改 -->
+        <receiver
+            android:name="com.qihoo.psdk.local.QBootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.qihoo.psdk.app.QStatActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.qihoo.psdk.remote.QRemoteService"
+            android:exported="true"
+            android:process=":QRemote" >
+            <intent-filter>
+                <action android:name="com.qihoo.psdk.service.action.remote" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.qihoo.psdk.local.QLocalService"
+            android:exported="true"
+            android:process=":QLocal" >
+            <intent-filter>
+                <action android:name="com.qihoo.psdk.service.action.local" />
+            </intent-filter>
+        </service>
+        <!-- 推送SDK end -->
+        
+        
+        
+        
+        <!-- 微信SDK -->
+        <!-- 微信相关的activity，如果游戏接入微信分享需要在游戏工程内实现这个activity，请直接使用demo中的代码实现，并放在游戏的工程的对应路径下。 -->
+ 
+        <!-- 从微信开放平台申请的appid，游戏需要去申请自己的appid -->
+        <meta-data
+            android:name="QHOPENSDK_WEIXIN_APPID"
+            android:value="wx528513398d6a8277" >
+        </meta-data>
+        <!-- 微信SDK end -->
+
+        <!-- qiku组件 start -->
+        <activity
+            android:name="com.coolcloud.uac.android.plug.view.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.AuthenticateActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.FindpwdActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.OAuth2Activity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.coolcloud.uac.android.api.view.RegisterActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- qiku组件 end -->
+
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。此处value为APPID。请在360应用开放平台注册申请 -->
+        <meta-data
+            android:name="QHOPENSDK_APPID"
+            android:value="202457181" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为APPKEY。请在360应用开放平台注册申请 -->
+        <meta-data
+            android:name="QHOPENSDK_APPKEY"
+            android:value="88aa39f58fd4c6262f47583b3709397a" >
+        </meta-data>
+
+        <!-- 必需的meta-data：QHOPENSDK_PRIVATEKEY。此处value为PRIVATEKEY不是APPSECRET，而是md5(app_secret +”#”+ app_key)，全小写，APPSECRET不允许保存在客户端！ -->
+        <meta-data
+            android:name="QHOPENSDK_PRIVATEKEY"
+            android:value="29f0c10c764723a8914ecd5476b58799" >
+        </meta-data>
+    
+    <!-- JPush Start -->
+        <!-- Required SDK核⼼功能-->
+		<activity
+			android:name="cn.jpush.android.ui.PushActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.ui.PushActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="com.jt.newox360" />
+			</intent-filter>
+		</activity>
+		<!-- Required SDK核⼼功能-->
+		<service
+			android:name="cn.jpush.android.service.DownloadService"
+			android:enabled="true"
+			android:exported="false" >
+		</service>
+		<!-- Required SDK 核⼼功能-->
+		<!-- option since 2.0.5 可配置android:process 参数将PushService设置为独⽴进程 -->
+		<service
+			android:name="cn.jpush.android.service.PushService"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTER" />
+				<action android:name="cn.jpush.android.intent.REPORT" />
+				<action android:name="cn.jpush.android.intent.PushService" />
+				<action android:name="cn.jpush.android.intent.PUSH_TIME" />
+			</intent-filter>
+		</service>
+		<!-- Required SDK 核⼼功能 since 1.8.0 -->
+		<service
+			android:name="cn.jpush.android.service.DaemonService"
+			android:enabled="true"
+			android:exported="true">
+		<intent-filter >
+		<action android:name="cn.jpush.android.intent.DaemonService" />
+		<category android:name="com.jt.newox360"/>
+		</intent-filter>
+		</service>
+		<!-- Required SDK核⼼功能-->
+		<receiver
+			android:name="cn.jpush.android.service.PushReceiver"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter android:priority="1000">
+			<action
+				android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!--Required 显⽰通知栏 -->
+				<category android:name="com.jt.newox360" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<!-- Optional -->
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<data android:scheme="package" />
+			</intent-filter>
+		</receiver>
+		<!-- Required SDK核⼼功能-->
+		<receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+		<!-- User defined. ⽤户⾃定义的⼲播接收器-->
+		<receiver
+		  android:name="com.hjwl.newox.jpush.MyReceiver"
+		  android:exported="false"
+		  android:enabled="true">
+		  <intent-filter>
+			  <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+			  <category android:name="com.jt.newox360" />
+		  </intent-filter>
+		 </receiver>
+		<!-- Required . Enable it you can get statistics data with channel -->
+		<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+		<meta-data android:name="JPUSH_APPKEY" android:value="0898c6148d7555f41db53cf1" />
+        <!-- JPush End -->
+    </application>
+
+    <!-- JPush start -->
+    <!-- Required ⾃定义⽤来收发消息的相关权限 -->
+  	<!--JPush-permission-start
+  	<permission
+		android:name="com.jt.newox360.permission.JPUSH_MESSAGE"
+		android:protectionLevel="signature" /> 
+	JPush-permission-end-->
+		
+  	<uses-permission android:name="com.jt.newox360.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+	<!-- JPush end -->
+    
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+   
+    <!-- 亲加sdk所需权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- 添加360SDK必需要的权限。begin -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <!-- payment -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <!-- 浮窗 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 微信分享相关 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- qiku start -->
+    <!-- 系统账户操作权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- 系统设置操作权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <!-- qiku end -->
+    <!-- 添加360SDK必需要的权限。end -->
+
+
+</manifest>

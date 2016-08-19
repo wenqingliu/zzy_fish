@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+              android:background="#202020"
+
+        >
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/le_topslide_toast_text"
+              android:textSize="13dp"
+              android:textStyle="normal"
+              android:textColor="#ffffff"
+              android:maxLines="2"
+              android:ellipsize="end"
+
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="12dp"
+            />
+    <ImageView android:layout_width="18dp"
+               android:layout_height="18dp"
+               android:id="@+id/le_topslide_toast_img"
+               android:layout_gravity="bottom"
+               android:layout_marginRight="8dp"
+               android:layout_toLeftOf="@id/le_topslide_toast_text"
+               android:layout_alignTop="@id/le_topslide_toast_text"
+
+            />
+    <TextView
+            android:layout_width="54dp"
+            android:layout_height="24dp"
+            android:id="@+id/le_topslide_toast_btn"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            android:layout_gravity="bottom"
+            android:textColor="@drawable/le_topslidetoast_btn_textcolor_selector"
+            android:background="@drawable/le_topslidetoast_btn_bg_selector"
+
+            android:layout_marginBottom="9dp"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="18dp"
+            android:clickable="true"
+            android:gravity="center"
+            />
+
+    <ImageView android:layout_width="1px"
+               android:layout_height="18dp"
+               android:background="#ffffff"
+               android:alpha="0.2"
+               android:id="@+id/le_topslide_toast_divider"
+               android:layout_toLeftOf="@id/le_topslide_toast_btn"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="12dp"
+
+               />
+
+
+
+
+
+</RelativeLayout>
+

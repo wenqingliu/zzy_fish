@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/bonus_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tab_usable"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sdk_btn_bonus_tab"
+            android:gravity="center"
+            android:text="@string/bonus_usable"
+            android:textColor="@color/sdk_tab_text_bonus_selector"
+            android:textSize="@dimen/button_generic_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cutoff_line_color" >
+        </View>
+
+        <TextView
+            android:id="@+id/tab_useout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sdk_btn_bonus_tab"
+            android:gravity="center"
+            android:text="@string/bonus_useout"
+            android:textColor="@color/sdk_tab_text_bonus_selector"
+            android:textSize="@dimen/button_generic_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cutoff_line_color" >
+        </View>
+
+        <TextView
+            android:id="@+id/tab_timeout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sdk_btn_bonus_tab"
+            android:gravity="center"
+            android:text="@string/bonus_timeout"
+            android:textColor="@color/sdk_tab_text_bonus_selector"
+            android:textSize="@dimen/button_generic_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/bonus_tab"
+        android:background="@color/cutoff_line_color" >
+    </View>
+
+    <View
+        android:id="@+id/tab_cursor"
+        android:layout_width="14dp"
+        android:layout_height="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/tab_cursor" >
+    </View>
+
+    <Button
+        android:id="@+id/bonus_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bonus_hlep_btn"
+        android:gravity="center"
+        android:text="@string/bonus_help"
+        android:textColor="@color/sdk_btn_text_btm_selector"
+        android:textSize="@dimen/button_generic_size" />
+    
+    <android.support.v4.view.ViewPager  
+        android:id="@+id/viewpager"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bonus_help"
+        android:layout_below="@id/bonus_tab" >  
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

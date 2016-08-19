@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sdk_user_detail_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/padding_vertical"
+    android:paddingLeft="@dimen/padding_horizontal"
+    android:paddingRight="@dimen/padding_horizontal"
+    android:paddingTop="@dimen/padding_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/sdk_icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@id/sdk_detail_icon"
+            android:layout_width="@dimen/passport_icon_width"
+            android:layout_height="@dimen/passport_icon_height"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/user_default_icon"
+            android:contentDescription="@string/content_description" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/passport_icon_height"
+        android:layout_alignTop="@id/sdk_icon_container"
+        android:layout_marginLeft="@dimen/margin_horizontal"
+        android:layout_toRightOf="@id/sdk_icon_container" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@id/sdk_tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:textSize="@dimen/content_generic_xmedium_size"/>
+
+            <TextView
+                android:id="@id/sdk_tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/account_name"
+                android:textColor="@color/account_name_text_color"
+                android:textSize="@dimen/common_generic_size" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/sdk_iv_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/sdk_arrow_right" />
+    </RelativeLayout>
+
+</RelativeLayout>

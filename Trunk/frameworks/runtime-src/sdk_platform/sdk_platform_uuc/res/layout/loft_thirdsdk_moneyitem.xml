@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="68.5dip"
+    android:layout_height="32dip">
+    <TextView 
+        android:id="@+id/money"
+        android:layout_width="68.5dip"
+        android:layout_height="32dip"
+        android:textColor="@color/loftThirdSDKMoneyColor"
+        android:text="test"
+        android:gravity="center"
+        android:background="@drawable/loft_thirdsdk_moneybutton_selector"
+        android:textSize="@dimen/loft_thirdpay_money_size"
+        />
+</RelativeLayout>

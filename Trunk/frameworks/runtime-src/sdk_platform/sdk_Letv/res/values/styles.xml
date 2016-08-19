@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="LePayCommonDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="lepay_fillparent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="lepay_wrapparent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="lepay_width_fillparent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="lepay_height_fillparent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <!-- 信用卡输入框布局 -->
+    <style name="lepay_card_edit_layout">
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- 底部按钮样式 -->
+    <style name="lepay_button_bottom_margin">
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:layout_marginRight">15dip</item>
+        <item name="android:layout_marginTop">17.5dip</item>
+    </style>
+
+    <style name="lepay_cashier_button_bottom_margin">
+        <item name="android:layout_marginLeft">12dip</item>
+        <item name="android:layout_marginRight">12dip</item>
+        <item name="android:layout_marginTop">13dip</item>
+    </style>
+
+    <!-- 页面通用布局样式 -->
+    <style name="lepay_page_layout_margin">
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:layout_marginRight">15dip</item>
+        <item name="android:layout_marginTop">17.5dip</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="MspAppTheme" parent="MspAppBaseTheme">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MspAppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+
+    <style name="OathSdkActionBarStyle">
+        <item name="android:background">@color/leui_status_bar_background</item>
+    </style>
+
+    <style name="OathSdktitleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="OathSdkTheme">
+        <item name="android:windowBackground">@color/main_content_background_color</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="OathTransTheme" parent="android:Theme.Translucent.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/leui_oath_account_background</item>
+        <!-- <item name="android:windowBackground">@color/text_color_white</item> -->
+    </style>
+
+    <style name="OathNoTitleBarTheme">
+        <item name="android:windowBackground">@color/main_content_background_color</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- LeTopSlideToast -->
+    <add-resource name="leTopSlideToast" type="style" />
+
+    <style name="leTopSlideToast">
+        <item name="@android:windowEnterAnimation">@anim/le_topslidetoast_anim_toast_enter</item>
+        <item name="@android:windowExitAnimation">@anim/le_topslidetoast_anim_toast_exit</item>
+    </style>
+
+    <!--
+    style name="SdkDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:background">@drawable/sdk_dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style
+    -->
+    <style name="SdkDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+</resources>

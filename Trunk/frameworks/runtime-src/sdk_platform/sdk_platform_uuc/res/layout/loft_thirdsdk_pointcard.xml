@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/loft_newpagehand">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值卡支付"
+            android:layout_centerInParent="true"
+            android:textColor="#fdffff"
+            android:textSize="@dimen/loft_thirdpay_title_size"/>
+        
+             <ImageButton
+            android:id="@+id/loft_thirdSDK_back"
+            android:layout_width="48.5dip"
+            android:layout_height="25.8dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="#00000000"
+            android:src="@drawable/loft_thirdsdk_backbutton_selector" />
+    </RelativeLayout>
+   
+    <RelativeLayout
+        android:id="@+id/loft_thirdSDK_rechargaCard_select"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/loft_thrid_pointcardbg" >
+
+        <TextView
+            android:id="@+id/textViewcardtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/TextColorBlack"
+            android:text="卡类型 ：" />
+
+        <TextView
+            android:id="@+id/textViewmoneytype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewcardtype"
+            android:layout_below="@+id/textViewcardtype"
+            android:layout_marginTop="33dp"
+             android:textColor="@color/TextColorBlack"
+            android:text="卡面额 ：" />
+
+        <TextView
+            android:id="@+id/textViewcardid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewmoneytype"
+            android:layout_below="@+id/textViewmoneytype"
+            android:layout_marginTop="33dp"
+             android:textColor="@color/TextColorBlack"
+            android:text="卡   号 ：" />
+
+        <TextView
+            android:id="@+id/textViewcardpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewcardid"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="17dp"
+             android:textColor="@color/TextColorBlack"
+            android:text="卡   密 ：" />
+
+        <EditText
+            android:id="@+id/loft_thirdSDK_cardPW"
+            android:layout_width="180dip"
+            android:layout_height="40.8dip"
+            android:layout_alignBaseline="@+id/textViewcardpwd"
+            android:layout_alignBottom="@+id/textViewcardpwd"
+            android:layout_alignParentRight="true"
+              android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入充值卡密码"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:textColorHint="@color/loftThirdSDKPromptColor"
+            android:textScaleX="1.2"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/loft_thirdSDK_cardID"
+            android:layout_width="180dip"
+            android:layout_height="40.8dip"
+            android:layout_alignBaseline="@+id/textViewcardid"
+            android:layout_alignBottom="@+id/textViewcardid"
+            android:layout_alignLeft="@+id/loft_thirdSDK_cardPW"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入充值卡号"
+            android:maxLength="30"
+            android:textColorHint="@color/loftThirdSDKPromptColor"
+            android:textScaleX="1.2"
+            android:textSize="11sp" />
+
+        <Spinner
+            android:id="@+id/spin_cardtype"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/spinner_selectorpoint" />
+
+        <Spinner
+            android:id="@+id/spin_moneytype"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/loft_thirdSDK_cardID"
+            android:layout_alignLeft="@+id/spin_cardtype"
+            android:background="@drawable/spinner_selectorpoint" />
+
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/loft_thirdSDK_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loft_thirdSDK_rechargaCard_select"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="* 面额单位为一元，充一元得**M币。 \n● 请核对面额与充值金额是否匹配，以免充值失败"
+        android:textColor="@color/loftThirdSDKPromptColor"
+        android:textSize="@dimen/loft_thirdpay_prompt_size" />
+
+    <Button
+        android:id="@+id/loft_thirdSDK_okButton"
+        android:layout_width="113.8dip"
+        android:layout_height="33.8dip"
+        android:layout_alignLeft="@+id/loft_thirdSDK_rechargaCard_select"
+        android:layout_alignRight="@+id/loft_thirdSDK_rechargaCard_select"
+        android:layout_below="@+id/loft_thirdSDK_prompt"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/loft_thirdsdk_surebutton_selector"
+        android:text="支付"
+        android:textColor="@color/uucun_thirdpay_white"
+        android:textSize="@dimen/loft_thirdpay_prompt_size" />
+    
+</RelativeLayout>

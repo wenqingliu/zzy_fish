@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/sdk_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/about_detail_margin_medium"
+        android:layout_marginTop="@dimen/about_detail_margin_large"
+        android:text="真三国无双"
+        android:textColor="@color/order_detail_title_color"
+        android:textSize="@dimen/common_generic_size" />
+
+    <TextView
+        android:id="@+id/sdk_tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/about_detail_margin_small"
+        android:layout_marginTop="@dimen/about_detail_margin_large"
+        android:text="1000元"
+        android:textColor="@color/balance_value_text_color"
+        android:textSize="@dimen/common_generic_size" />
+
+    <TextView
+        android:id="@+id/sdk_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/sdk_tv_name"
+        android:layout_marginLeft="@dimen/about_detail_margin_medium"
+        android:layout_marginTop="@dimen/about_detail_margin_small"
+        android:text="2015/06/02"
+        android:textColor="@color/order_detail_color"
+        android:textSize="@dimen/input_generic_size" />
+
+    <TextView
+        android:id="@+id/sdk_order_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/sdk_tv_amount"
+        android:layout_marginRight="@dimen/about_detail_margin_small"
+        android:layout_marginTop="@dimen/about_detail_margin_small"
+        android:text="成功"
+        android:textColor="@color/order_detail_color"
+        android:textSize="@dimen/input_generic_size" />
+
+</RelativeLayout>

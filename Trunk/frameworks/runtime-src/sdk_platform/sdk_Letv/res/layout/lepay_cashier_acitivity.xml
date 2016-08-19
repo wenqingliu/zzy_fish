@@ -1,0 +1,345 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/lepay_fillparent"
+    android:background="@color/lepay_page_layout_bg_color"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <include
+        android:id="@+id/lepay_actionbar"
+        layout="@layout/lepay_actionbar" />
+
+    <ScrollView
+        android:id="@+id/lepay_cashier_sview"
+        style="@style/lepay_fillparent"
+        android:layout_below="@id/lepay_actionbar" >
+
+        <LinearLayout
+            android:id="@+id/lepay_ll_cashier"
+            style="@style/lepay_width_fillparent"
+            android:orientation="vertical"
+            android:paddingBottom="60dp" >
+
+            <RelativeLayout
+                android:id="@+id/lepay_banner_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:background="@color/lepay_banner_sales"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/lepay_banner_text"
+                    style="@style/lepay_wrapparent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toLeftOf="@+id/lepay_banner_btn"
+                    android:singleLine="true"
+                    android:text="年度优惠，充100返50！年度优惠，充100返50！年度优惠，充100返50！年度优惠，充100返50！年度优惠，充100返50！"
+                    android:textColor="@color/lepay_banner_text"
+                    android:textSize="@dimen/lepay_font_size" />
+
+                <ImageView
+                    android:id="@+id/lepay_banner_btn"
+                    style="@style/lepay_wrapparent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/lepay_activity_horizontal_margin"
+                    android:src="@drawable/lepay_password_dialog_shanchu" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/lepay_wrapparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/lepay_cashier_title_tradeinfo"
+                android:textColor="@color/lepay_cashier_black"
+                android:textSize="@dimen/lepay_cashier_title_tradeinfo" />
+
+            <LinearLayout
+                android:id="@+id/lepay_cashier_trade_area"
+                style="@style/lepay_width_fillparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lepay_layout_ditu"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/lepay_cashier_tradeinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="17dp" >
+
+                    <TextView
+                        android:id="@+id/lepay_cashier_trade_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:maxWidth="200dp"
+                        android:singleLine="true"
+                        android:textColor="@color/lepay_cashier_trade_title_font_color"
+                        android:textSize="@dimen/lepay_tv_paymoney_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lepay_cashier_trade_title"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/lepay_cashier_trade_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="180dp"
+                            android:singleLine="true"
+                            android:textColor="@color/lepay_cashier_trade_desc_font_color"
+                            android:textSize="@dimen/lepay_cashier_trade_desc" />
+
+                        <ImageView
+                            android:id="@+id/lepay_cashier_trade_description_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/lepay_other_paytype_formal" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/lepay_cashier_trade_image"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="14dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/lepay_icon_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/lepay_layout_line" />
+
+                <RelativeLayout
+                    android:id="@+id/lepay_cashier_tradeprice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="17dp" >
+
+                    <TextView
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lepay_cashier_tradeinfo_price_title"
+                        android:textColor="@color/lepay_tv_paymoney_font_color"
+                        android:textSize="@dimen/lepay_tv_paymoney_font_size" />
+
+                    <TextView
+                        android:id="@+id/lepay_cashier_trade_price"
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="5979.00元"
+                        android:textColor="@color/lepay_cashier_trade_price_font_color"
+                        android:textSize="@dimen/lepay_cashier_title_tradeinfo"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lepay_cashier_lastprice_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="17dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lepay_cashier_tradeinfo_lastprice_title"
+                        android:textColor="@color/lepay_tv_paymoney_font_color"
+                        android:textSize="@dimen/lepay_tv_paymoney_font_size" />
+
+                    <TextView
+                        android:id="@+id/lepay_cashier_lastprice_tv"
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="5979.00元"
+                        android:textColor="@color/lepay_cashier_trade_price_font_color"
+                        android:textSize="@dimen/lepay_cashier_title_tradeinfo"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lepay_coupon_notify"
+                style="@style/lepay_wrapparent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/lepay_wrapparent"
+                    android:text="注："
+                    android:textColor="#bf873c"
+                    android:textSize="@dimen/lepay_cashier_trade_desc" 
+                    />
+
+                <TextView
+                    style="@style/lepay_wrapparent"
+                    android:text="@string/lepay_coupon_notify"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="#bf873c"
+                    android:textSize="@dimen/lepay_cashier_trade_desc" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lepay_title_couponinfo"
+                style="@style/lepay_wrapparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/lepay_title_couponinfo"
+                android:textColor="@color/lepay_cashier_black"
+                android:textSize="@dimen/lepay_cashier_title_tradeinfo"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lepay_cashier_game_coupon"
+                style="@style/lepay_width_fillparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lepay_layout_ditu"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/lepay_cashier_gamecoupon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="17dp" >
+
+                    <ImageView
+                        android:id="@+id/img_checked"
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/lepay_checkbox_checked"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/lepay_title_coupon"
+                        style="@style/lepay_wrapparent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_checked"
+                        android:text="@string/lepay_title_choose_coupon"
+                        android:textColor="@color/lepay_tv_paymoney_font_color"
+                        android:textSize="@dimen/lepay_tv_paymoney_font_size" />
+
+                    <TextView
+                        android:id="@+id/lepay_coupon_useable"
+                        style="@style/lepay_wrapparent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/lepay_title_coupon"
+                        android:background="@drawable/lepay_coupon_shape_red"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="1dp"
+                        android:text="2张可用"
+                        android:textColor="@color/lepay_white" />
+
+                    <TextView
+                        android:id="@+id/lepay_cashier_coupon_status"
+                        style="@style/lepay_wrapparent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@drawable/lepay_arrow_right"
+                        android:text="@string/lepay_coupon_nouse"
+                        android:textColor="@color/lepay_cashier_trade_desc_font_color"
+                        android:textSize="@dimen/lepay_cashier_trade_desc" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/lepay_wrapparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/lepay_cashier_title_paytype"
+                android:textColor="@color/lepay_cashier_black"
+                android:textSize="@dimen/lepay_cashier_title_tradeinfo" />
+
+            <LinearLayout
+                android:id="@+id/lepay_cashier_paytype_list"
+                style="@style/lepay_width_fillparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lepay_layout_ditu"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/lepay_cashier_paytype_other_list"
+                style="@style/lepay_width_fillparent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/lepay_layout_ditu"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lepay_cashier_paytype_other"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="34dp"
+                android:layout_marginTop="13dp"
+                android:gravity="end"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lepay_cashier_paytype_other_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lepay_cashier_title_paytype_other_selector"
+                    android:textColor="@color/lepay_cashier_paytype_other_selector_font_color"
+                    android:textSize="@dimen/lepay_cashier_paytype_other_selector_font_size" />
+
+                <ImageView
+                    android:id="@+id/lepay_cashier_paytype_other_selector_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/lepay_other_paytype_formal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/lepay_cashier_pay_button"
+        style="@style/lepay_cashier_button_bottom_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/lepay_button_page_selector"
+        android:text="@string/lepay_cashier_nextstep"
+        android:textColor="@color/lepay_bottom_button_font_color"
+        android:textSize="@dimen/lepay_bottom_button_font_size" />
+
+</RelativeLayout>

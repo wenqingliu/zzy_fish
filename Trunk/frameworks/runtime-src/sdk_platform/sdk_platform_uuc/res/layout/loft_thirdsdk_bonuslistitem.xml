@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select"
+    >
+ 
+    <TextView
+        android:id="@+id/tetViewMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/TextColorBlack"
+        android:padding="8dip"
+        android:text="TextView"
+       />
+ 
+    <TextView
+        android:id="@+id/tetViewinvalid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tetViewMoney"
+        android:layout_marginLeft="100dp"
+        android:paddingTop="8dip"
+        android:paddingBottom="8dip"
+        android:textColor="@color/TextColorBlack"
+        android:text="TextView"
+        />
+ 
+</RelativeLayout>

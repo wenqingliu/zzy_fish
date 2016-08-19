@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <View
+        android:id="@+id/bg1"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/bonus_yellow" >
+    </View>
+
+    <View
+        android:id="@+id/bg2"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/bg1"
+        android:background="@drawable/bonus_bg" >
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/bonus_tip"
+        android:textColor="@color/color_bottom_btn"
+        android:textSize="@dimen/button_generic_size" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/code_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/bonus_change_title"
+            android:textColor="@color/white"
+            android:textSize="18sp" >
+        </TextView>
+        
+        <EditText
+            android:id="@+id/code_input"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center"
+            android:hint="@string/bonus_change_code"
+            android:textColor="@color/white"
+            android:textColorHint="@color/bonus_hint"
+            android:background="@color/bonus_input"
+            android:textSize="18sp" >
+        </EditText>
+        
+        <Button
+            android:id="@+id/code_commit"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="@string/bonus_change_now"
+            android:textColor="@color/bonus_yellow"
+            android:background="@drawable/sdk_btn_bonus_selector"
+            android:textSize="20sp" >
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

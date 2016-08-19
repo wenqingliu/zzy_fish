@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hjwl.jpush"
+    android:versionCode="22"
+    android:versionName="3.0.11" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="false"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+
+        <!-- 自定义渠道标识，请记得修改，值一般为登录类型值(登录类型见SDKControlOriginal.java) -->
+        <meta-data
+            android:name="sdk_platform"
+            android:value="1" />
+        
+        
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="7ebcfe30-6693-4691-a7c9-a97ea2616640" />
+
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="cocos2dlua" />
+
+        <activity
+            android:name="org.cocos2dx.lua.AppActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- TODO SDK接入 QQ接入配置 START -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105125571" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- TODO SDK接入 QQ接入配置 END -->
+
+
+        <!-- TODO SDK接入 微信接入配置 START -->
+        <activity
+            android:name="com.tencent.tmgp.niuox.wxapi.WXEntryActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="WXEntryActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.example.wegame.diff" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxcde873f99466f74a" />
+            </intent-filter>
+        </activity>
+        <!-- TODO SDK接入 微信接入配置 END -->
+
+        <activity
+            android:name="com.tencent.unipay.plugsdk.sample.AndroidPaySample"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <!-- JPush Start -->
+        <!-- Required SDK核心功能-->
+		<activity
+			android:name="cn.jpush.android.ui.PushActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.ui.PushActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="com.tencent.tmgp.niuox" />
+			</intent-filter>
+		</activity>
+		<!-- Required SDK核心功能-->
+		<service
+			android:name="cn.jpush.android.service.DownloadService"
+			android:enabled="true"
+			android:exported="false" >
+		</service>
+		<!-- Required SDK 核心功能-->
+		<!-- option since 2.0.5 可配置android:process 参数将PushService设置为独⽴进程 -->
+		<service
+			android:name="cn.jpush.android.service.PushService"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTER" />
+				<action android:name="cn.jpush.android.intent.REPORT" />
+				<action android:name="cn.jpush.android.intent.PushService" />
+				<action android:name="cn.jpush.android.intent.PUSH_TIME" />
+			</intent-filter>
+		</service>
+		<!-- Required SDK 核心功能 since 1.8.0 -->
+		<service
+			android:name="cn.jpush.android.service.DaemonService"
+			android:enabled="true"
+			android:exported="true">
+		<intent-filter >
+		<action android:name="cn.jpush.android.intent.DaemonService" />
+		<category android:name="com.tencent.tmgp.niuox"/>
+		</intent-filter>
+		</service>
+		<!-- Required SDK核心功能-->
+		<receiver
+			android:name="cn.jpush.android.service.PushReceiver"
+			android:enabled="true"
+			android:exported="false">
+			<intent-filter android:priority="1000">
+			<action
+				android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!--Required 显示通知栏 -->
+				<category android:name="com.tencent.tmgp.niuox" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<!-- Optional -->
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<data android:scheme="package" />
+			</intent-filter>
+		</receiver>
+		<!-- Required SDK核心功能-->
+		<receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+		<!-- User defined. 用户自定义的广播接收器-->
+		<!-- Required . Enable it you can get statistics data with channel -->
+		<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+		<meta-data android:name="JPUSH_APPKEY" android:value="c09fa0a716d14e79fd9ce0ae" />
+        <!-- JPush End -->
+    </application>
+
+    <!-- JPush start -->
+    <!-- Required ⾃定义⽤来收发消息的相关权限 -->
+	<permission
+		android:name="com.tencent.tmgp.niuox.permission.JPUSH_MESSAGE"
+		android:protectionLevel="signature" />
+	<!-- Required ⼀些系统要求的权限，如访问⺴络等-->
+	<uses-permission android:name="com.tencent.tmgp.niuox.permission.JPUSH_MESSAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<!-- Optional for location -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission
+	android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<!-- JPush end -->
+    <!-- TODO SDK接入必须权限模块 START -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 登录上报时需要带设备名称, 通过蓝牙模块来获取设备名称 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 可选的权限：异常上报系统log,XG也需要 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 START -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+    <!-- TODO SDK接入 接入支付需要设置屏幕兼容声明 END -->
+
+</manifest>

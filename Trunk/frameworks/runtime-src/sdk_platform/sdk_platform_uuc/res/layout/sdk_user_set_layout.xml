@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+    
+    <RelativeLayout
+        android:id="@+id/sdk_nick_container"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dip"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/sdk_set_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sdk_text_margin_large"
+        android:paddingRight="@dimen/sdk_text_margin_large" >
+
+        <TextView
+            android:id="@+id/sdk_btn_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:duplicateParentState="true"
+            android:text="@string/sdk_user_nick"
+            android:textColor="@color/color_font_black"
+            android:textSize="18sp"
+            android:gravity="center_vertical" />
+        
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sdk_arrow_right"
+            android:contentDescription="@string/content_description" />
+        
+        <TextView
+            android:id="@+id/sdk_tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:textColor="@color/user_info_value"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@id/sdk_bind_container"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/sdk_nick_container"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/sdk_set_item_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sdk_text_margin_large"
+        android:paddingRight="@dimen/sdk_text_margin_large" >
+
+        <TextView
+            android:id="@id/sdk_btn_set_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="@string/sdk_user_phone"
+            android:textColor="@color/color_font_black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/sdk_arrow_right" />
+
+        <TextView
+            android:id="@id/sdk_tv_binded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:drawableLeft="@drawable/sdk_tip_not_bind"
+            android:textColor="@color/color_bottom_divider"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/sdk_code_level_container"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="2dip"
+        android:layout_height="50dp"
+        android:layout_below="@id/sdk_bind_container"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/sdk_set_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sdk_text_margin_large"
+        android:paddingRight="@dimen/sdk_text_margin_large" >
+
+        <TextView
+            android:id="@id/sdk_btn_update_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:duplicateParentState="true"
+            android:text="@string/sdk_update_code"
+            android:textColor="@color/color_font_black"
+            android:textSize="18sp"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sdk_arrow_right"
+            android:contentDescription="@string/content_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sdk_pay_pwd_container"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="2dip"
+        android:layout_height="50dp"
+        android:layout_below="@id/sdk_code_level_container"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/sdk_set_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sdk_text_margin_large"
+        android:paddingRight="@dimen/sdk_text_margin_large" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:duplicateParentState="true"
+            android:text="@string/sdk_user_password"
+            android:textColor="@color/color_font_black"
+            android:textSize="18sp"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sdk_arrow_right"
+            android:contentDescription="@string/content_description" />
+
+    </RelativeLayout>
+    
+    <Button
+        android:id="@id/sdk_switch_user_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdk_button_height_m"
+        android:layout_below="@id/sdk_pay_pwd_container"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/sdk_btn_commit"
+        android:text="@string/sdk_switch_user"
+        android:textColor="@color/game_text_status"
+        android:textSize="18sp" /> 
+
+    
+
+</RelativeLayout>

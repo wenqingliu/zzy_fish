@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:layout_gravity="center"
+    android:background="@drawable/sdk_trans_bg"
+    android:minWidth="240dp" >
+
+    <RelativeLayout
+        android:id="@id/sdk_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdk_agreement_title_h"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:paddingLeft="@dimen/sdk_fast_reg_margin_h_dimen"
+        android:paddingRight="@dimen/sdk_fast_reg_margin_h_dimen" >
+
+        <TextView
+            android:id="@id/sdk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/sdk_agreement_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sdk_title_bar_font_size" />
+
+        <ImageView
+            android:id="@id/sdk_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description"
+            android:padding="5dip"
+            android:src="@drawable/sdk_title_close_icon" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/sdk_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sdk_title_bar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/agreement_divider_horizon"
+        android:contentDescription="@string/content_description"
+        android:layout_marginLeft="@dimen/sdk_fast_reg_margin_h_dimen"
+        android:layout_marginRight="@dimen/sdk_fast_reg_margin_h_dimen" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/sdk_divider"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/sdk_fast_reg_margin_v_dimen"
+        android:paddingLeft="@dimen/sdk_fast_reg_margin_h_dimen"
+        android:paddingRight="@dimen/sdk_fast_reg_margin_h_dimen"
+        android:paddingTop="@dimen/sdk_fast_reg_margin_v_dimen"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/sdk_scrollbar" >
+
+        <TextView
+            android:id="@id/sdk_tv_agreement_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/content_generic_small_size" />
+    </ScrollView>
+
+</RelativeLayout>

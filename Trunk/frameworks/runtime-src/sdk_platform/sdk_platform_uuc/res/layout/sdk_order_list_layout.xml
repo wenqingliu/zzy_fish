@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/sdk_order_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sdk_tv_balance"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#f5f5f5"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/sdk_account_balance"
+            android:textColor="@color/balance_value_text_color"
+            android:textSize="@dimen/input_generic_size" />
+
+        <ListView
+            android:id="@+id/order_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#ededed"
+            android:dividerHeight="1px"
+            android:fadingEdge="none"
+            android:listSelector="#00000000" >
+        </ListView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/error_status_view"
+        layout="@layout/error_status_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/retry_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/resources_progress_overlay"
+        android:visibility="gone" />
+
+</RelativeLayout>

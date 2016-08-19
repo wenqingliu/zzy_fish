@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <com.uucun.android.passport.layout.CustomViewPager
+        android:id="@id/sdk_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/activity_set_bottom">
+    </com.uucun.android.passport.layout.CustomViewPager>
+    
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/activity_set_bottom"
+        android:background="#e2e3e5" />
+    
+    <LinearLayout
+        android:id="@id/activity_set_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sdk_main_bottom"
+        android:orientation="horizontal" >
+
+        <com.uucun.android.passport.layout.DrawableCenterTextView
+            android:id="@+id/sdk_btn_activity"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            
+            android:drawableLeft="@drawable/sdk_btn_activity_selector"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/sdk_activity"
+            android:textColor="@color/sdk_btn_text_btm_selector"
+            android:textSize="@dimen/button_generic_size" />
+
+        <com.uucun.android.passport.layout.DrawableCenterTextView
+            android:id="@+id/sdk_btn_game"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+           
+            android:drawableLeft="@drawable/sdk_btn_game_selector"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/sdk_game"
+            android:textColor="@color/sdk_btn_text_btm_selector"
+            android:textSize="@dimen/button_generic_size" />
+        
+        <com.uucun.android.passport.layout.DrawableCenterTextView
+            android:id="@+id/sdk_btn_account"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+    
+            android:drawableLeft="@drawable/sdk_btn_account_selector"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/sdk_account"
+            android:textColor="@color/sdk_btn_text_btm_selector"
+            android:textSize="@dimen/button_generic_size" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="common_gray">#8f8f8f</color>
+    <color name="translucent">#00ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="breadcrumb_text_color">#ffffff</color>
+    <color name="spinner_bg_color">#c0000000</color>
+    <color name="spinner_listview_divider_color">#c4c5c2</color>
+    <color name="spinner_listitem_select_color">#3e3e3e</color>
+    <color name="login_spinner_listitem_select_color">#c2c2c2</color>
+    <color name="cutoff_line_color">#e5e6e7</color>
+
+    <!-- Actionbar color -->
+    <color name="color_actionbar_text">#ffffff</color>
+    <color name="color_input_text">#ffffff</color>
+    <color name="color_button_text">#ffffff</color>
+    <color name="color_disable_button_text">#ffffff</color>
+    <color name="color_common_text">#706e6f</color>
+    <color name="color_tip_text">#777777</color>
+    <color name="color_secondary_text">#b9b9b9</color>
+    <color name="color_warn_text">#ff0000</color>
+    <color name="color_hint_text">#8f8f8f</color>
+    <color name="color_blue_text">#019ede</color>
+    <color name="color_tip_gray">#b3b3b3</color>
+    
+    <!-- login color -->
+    <color name="color_divide_bg">#d4d4d4</color>
+    <color name="color_text_hint">#bfbfbf</color>
+    <color name="color_username_password">#4d4d4d</color>
+
+    <!-- activity color -->
+    <color name="color_bottom_btn">#808080</color>
+    <color name="color_bottom_btn_selected">#019ede</color>
+    <color name="color_bottom_btn_bg">#f6f6f6</color>
+    <color name="color_bottom_divider">#019ede</color>
+    <color name="color_network_error_text">#444444</color>
+    <color name="color_set_item_bg">#f5f5f5</color>
+    <color name="color_set_item_pressed_bg">#dadada</color>
+    <color name="color_font_black">#444444</color>
+    <color name="color_font_gray">#c3c3c3</color>
+
+    <!-- code show/hide -->
+    <color name="color_text_hide">#a0a0a0</color>
+    <color name="color_text_show">#87b81e</color>
+
+    <!-- Background -->
+    <color name="color_fragment_background">#eeeeee</color>
+
+    <!-- Toast color -->
+    <color name="color_toast_background_warning">#c4f1a39d</color>
+    <color name="color_toast_background">#c4f9d973</color>
+
+    <!-- Tab text Color -->
+    <color name="color_tab_text_selected">#8ab71e</color>
+    <color name="color_tab_text">#a1a1a1</color>
+
+    <!-- Dialog color -->
+    <color name="color_dlg_title_text">#343434</color>
+    <color name="text_large_color">#ffffff</color>
+    <color name="text_small_color">#828282</color>
+    <color name="detail_text_color">#9f9f9f</color>
+    <color name="primary_text">#d4d4d4</color>
+    <color name="secondary_text">#969696</color>
+    <color name="text_color_second">#6c6c6c</color>
+    <color name="alert_dialog_message_color">#999999</color>
+    <color name="alert_dialog_line_color">#676767</color>
+    <color name="default_ev_border_color">#e4e4e4</color>
+    <color name="default_ev_password_color">#cccccc</color>
+
+    <!-- Game Page color -->
+    <color name="game_grid_bg">#f3f4f5</color>
+    <color name="game_grid_bg_line">#e2e3e5</color>
+    <color name="game_text_title">#3f4041</color>
+    <color name="game_text_gary">#6a6b6c</color>
+    <color name="game_topbar">#747576</color>
+    <color name="game_text_status">#0086d8</color>
+    <color name="game_wave">#66000000</color>
+
+    <!-- User set -->
+    <color name="user_info_title">#1e1f20</color>
+    <color name="user_info_value">#78797a</color>
+    <color name="user_btn_commit">#f1f2f4</color>
+    <color name="user_info_phone">#e08518</color>
+    <color name="user_btn_identy">#f88813</color>
+    <color name="user_dialog_line">#d6d7d8</color>
+    <color name="user_dialog_input_hint">#aaabad</color>
+
+    <!-- User Center -->
+    <color name="recharge_btn_text_color">#009edf</color>
+    <color name="balance_text_color">#b5b5b5</color>
+    <color name="balance_value_text_color">#e99938</color>
+    <color name="account_name_text_color">#919191</color>
+
+    <drawable name="gray">#5b5c5d</drawable>
+    <drawable name="blue">#0086d8</drawable>
+
+    <!-- about us -->
+    <color name="about_version_bg_color">#f5f5f5</color>
+    <color name="about_version_text_color">#8f8f8f</color>
+    <color name="container_text_color">#444444</color>
+    <color name="contact_info_text_color">#8f8f8f</color>
+    <color name="contact_phone_qq_text_color">#00a0db</color>
+
+    <!-- order detail -->
+    <color name="order_detail_color">#828282</color>
+    <color name="order_detail_title_color">#333333</color>
+    
+    <!-- bonus -->
+    <color name="bonus_yellow">#f8b463</color>
+    <color name="bonus_hint">#f3ac5d</color>
+    <color name="bonus_input">#ffcf98</color>
+    
+    <color name="divider_line_color">#ededed</color>
+    
+    <!-- register successful -->
+    <color name="register_success_bg_color">#3b4a64</color>
+    <color name="ability_bg_color">#f7f7f7</color>
+    <color name="color_gray_text">#a6a6a6</color>
+    <color name="color_light_gray_text">#888888</color>
+    
+    
+    
+     <drawable name="uucun_thirdpay_darkgray">#dadada</drawable>
+    <drawable name="uucun_thirdpay_white">#FFFFFFFF</drawable>
+     <color name = "thirdpay_uucun_transparent" >#9000</color>
+     <color name="uucun_thirdpay_ok_btn_color">#315675</color>
+     <color name="uucun_thirdpay_yellow">#ffff00</color>
+     <color name="uucun_thirdpay_trans">#00000000</color>
+     <color name="uucun_thirdpay_white">#FFFFFF</color>
+     <color name="uucun_thirdpay_dialog_border_color">#1B66AB</color>    
+     <color name="uucun_thirdpay_color_bg_common">#A5C1C1</color>  
+     <!--支付密码框需要的资源 -->
+     <color name="loft_default_ev_border_color">#cccccc</color> 
+     <color name="loft_default_ev_password_color">#ff3300</color> 
+     <color name="loft_user_info_title">#1e1f20</color> 
+     <color name="loft_game_grid_bg_line">#e2e3e5</color>
+     
+    <style name="NoTitleDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+         <item name="android:windowBackground">@color/thirdpay_uucun_transparent</item>
+    </style>
+    
+    <style name="NoTitleUpdateDialog" parent="android:style/Theme.Dialog">	
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">#00000000</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+    </style>
+  
+    <color name="AppBackgroundColor">#FFC0E7FA</color>
+	<color name="TextColorBlack">#FF000000</color>
+	<color name="TextColorWhite">#FFFFFFFF</color>
+	<color name="TextColorBlue">#0066CC</color>
+	<color name="TextColorGray">#FF505050</color>
+	<color name="TextColorRed">#FFE26926</color>
+	<color name="BgColor">#ffd1dce9</color>
+	<color name="loftThirdSDKPaytypeBgColor">#00000000</color>
+	<color name="loftThirdSDKPaytypeTextColor">#536979</color>
+     <color name="loftThirdSDKWhiteColor">#ffffff</color>
+	<color name="loftThirdSDKMoneyHintColor">#7a8a94</color>
+	<color name="loftThirdSDKButtonColor">#ff6a06</color>
+	<color name="loftThirdSDKOrderButtonColor">#ff866a</color>
+	<color name="loftThirdSDKBackButtonColor">#cd5636</color>
+	<color name="loftThirdSDKPromptColor">#c7d2d6</color>
+	<color name="loftThirdSDKMoneyColor">#89a3af</color>
+	<color name="loftThirdSDKSelectMoneyBGColor">#e0e7ea</color>
+    <color name="loftThirdSDKSelectMoneyTextColor">#5d5d5e</color>
+	<color name="loftThirdSDKTransparentColor">#00000000</color>
+	<color name="xptransparent">#9000</color>
+
+</resources>

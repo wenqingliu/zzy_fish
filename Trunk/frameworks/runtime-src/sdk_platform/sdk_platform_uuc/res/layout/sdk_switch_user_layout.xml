@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/user_layout_id"
+        android:layout_width="279dip"
+        android:layout_height="27dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/sdk_switch_user_popup_height"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/sdk_input_bg_blue"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@id/sdk_tv_username"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/sdk_switch_user_margin"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@id/sdk_btn_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:contentDescription="@string/content_description"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:src="@drawable/btn_drop_down" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sdk_btn_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_layout_id"
+        android:gravity="center_horizontal"
+        android:minHeight="100dip" >
+
+        <RelativeLayout
+            android:id="@+id/sdk_btn_switch"
+            android:layout_width="240dip"
+            style="@style/common_button_gray_style"
+            android:layout_marginBottom="30dip"
+            android:background="@drawable/sdk_btn_blue_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/sdk_btn_switch"
+                android:drawablePadding="5dip"
+                android:text="@string/sdk_switch_user"
+                android:textColor="@color/white"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sdk_add_user"
+            android:layout_width="240dip"
+            style="@style/common_button_blue_style"
+            android:layout_below="@id/sdk_btn_switch"
+            android:background="@drawable/sdk_btn_blue_line_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/sdk_add_user"
+                android:drawablePadding="5dip"
+                android:text="@string/sdk_add_new_account"
+                android:textColor="@color/color_network_error_text"
+                android:textSize="@dimen/content_generic_xmedium_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

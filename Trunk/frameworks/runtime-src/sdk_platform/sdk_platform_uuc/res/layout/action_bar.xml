@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uucun.android.passport.layout.PassportActionBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sdk_action_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/action_bar_height"
+    android:background="@color/black"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/margin_horizontal"
+    android:paddingRight="@dimen/margin_horizontal" >
+
+    <TextView
+        android:id="@id/sdk_breadcrumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/sdk_default_title"
+        android:textColor="@color/color_actionbar_text"
+        android:textSize="@dimen/action_bar_font_size" />
+
+    <TextView
+        android:id="@id/sdk_navigator_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:background="@drawable/sdk_btn_green_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sdk_nav_logout"
+        android:textColor="@color/color_actionbar_text"
+        android:textSize="@dimen/action_bar_font_small_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@id/sdk_navigator_register"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:background="@drawable/sdk_btn_green_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sdk_register"
+        android:textColor="@color/color_actionbar_text"
+        android:textSize="@dimen/action_bar_font_small_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@id/sdk_navigator_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:background="@drawable/sdk_btn_green_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sdk_login"
+        android:textColor="@color/color_actionbar_text"
+        android:textSize="@dimen/action_bar_font_small_size"
+        android:visibility="invisible" />
+    
+    <TextView
+        android:id="@id/sdk_navigator_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:background="@drawable/sdk_btn_green_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/sdk_switch_user_bar"
+        android:textColor="@color/color_actionbar_text"
+        android:textSize="@dimen/action_bar_font_small_size"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/sdk_navigator_back"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:contentDescription="@string/content_description"
+        android:gravity="center"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:src="@drawable/sdk_btn_back_selector"
+        android:visibility="visible" />
+    
+    <ImageView
+        android:id="@+id/sdk_navigator_close"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/sdk_btn_close_selector"
+        android:clickable="true"
+        android:contentDescription="@string/content_description"
+        android:gravity="center"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:visibility="visible" />
+    
+    <TextView
+        android:id="@+id/sdk_navigator_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/sdk_text_margin"
+        android:paddingRight="@dimen/sdk_text_margin"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/about_us"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_generic_size"
+        android:visibility="invisible" />
+</com.uucun.android.passport.layout.PassportActionBar>

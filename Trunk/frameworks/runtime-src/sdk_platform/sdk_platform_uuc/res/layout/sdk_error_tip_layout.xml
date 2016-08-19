@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="266dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/color_set_item_bg"
+        android:minHeight="152dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip" >
+        
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sdk_error_fragment_icon"
+            android:scaleType="matrix"
+            android:layout_marginTop="14dip"
+            android:contentDescription="@string/content_description"/>
+        
+        <TextView 
+            android:id="@id/sdk_tv_error_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_generic_medium_size"
+            android:layout_marginTop="14dip"/>
+	        
+    	<TextView android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginTop="20dip"
+    	    android:textColor="@color/color_network_error_text"
+    	    android:textSize="@dimen/content_entry_small_size"/>
+    	
+    	<TextView android:layout_width="wrap_content"
+    	    android:id="@id/sdk_tv_connection"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginTop="10dip"
+    	    android:textSize="@dimen/content_generic_xsmall_size"
+    	    android:textColor="@color/color_blue_text"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="121dip"
+    android:layout_height="25.8dip"
+    android:background="#00000000">
+    <ImageView 
+        android:id="@+id/bankImage"
+        android:layout_width="72.5dip"
+        android:layout_height="14.5dip"
+        android:background="#00000000"
+        android:scaleType="centerInside"
+        />
+</RelativeLayout>

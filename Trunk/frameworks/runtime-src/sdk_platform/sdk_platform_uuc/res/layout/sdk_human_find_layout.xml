@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/sdk_padding_h_max"
+    android:paddingRight="@dimen/sdk_padding_h_max"  >
+    
+    <TextView
+            android:id="@+id/human_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/user_info_value"
+            android:textSize="16sp"
+            android:text="@string/sdk_pwd_human_find_hint"
+            android:lineSpacingExtra="6dp">
+    </TextView>
+    
+     <TextView
+            android:id="@+id/tv_qq_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_below="@id/human_hit"
+            android:layout_alignLeft="@id/human_hit"
+            android:textColor="@color/user_info_value"
+            android:textSize="16sp"
+            android:textIsSelectable="true"
+            android:text="@string/sdk_pwd_human_find_hint_qq"
+            android:lineSpacingExtra="6dp">
+    </TextView>
+
+</RelativeLayout>

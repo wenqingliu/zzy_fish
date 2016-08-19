@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   
+    android:background="@color/transparent"
+    android:orientation="horizontal" >
+
+    <!-- 点击左扩展部分 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 父布局用于限制动画的范围 -->
+
+        <LinearLayout
+            android:id="@+id/sdk_left_container_extend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/sdk_logo_backright"
+            android:visibility="gone"
+            tools:ignore="UselessParent" >
+
+            <!-- 左扩展活动按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_left_container_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+               
+                >               
+                <TextView
+                    android:id="@+id/sdk_iv_left_activity"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:paddingTop="4dp"
+                    android:drawableTop="@drawable/sdk_btn_activity_selector"
+                    android:gravity="center"
+                    android:text="@string/sdk_activity"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_left_activity_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+
+            <!-- 左扩展游戏按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_left_container_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                 >
+                <TextView
+                    android:id="@+id/sdk_iv_left_game"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:paddingTop="4dp"
+                    android:drawableTop="@drawable/sdk_btn_game_selector"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/sdk_game"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_left_game_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+
+            <!-- 左扩展我按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_left_container_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                  android:layout_marginRight="4dp"
+                >
+
+                <TextView
+                    android:id="@+id/sdk_iv_left_user"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:paddingTop="4dp"
+                    android:drawableTop="@drawable/sdk_btn_account_selector"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/sdk_me"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_left_user_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 浮动按钮 -->
+
+    <FrameLayout
+        android:id="@+id/sdk_container_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@color/transparent"
+        android:layout_gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/sdk_iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_logo"
+            android:contentDescription="@string/content_description"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/sdk_tv_new"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_new_activity_num_bg"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="6sp"
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
+    </FrameLayout>
+
+    <!-- 点击右扩展部分 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 父布局用于限制动画的范围 -->
+
+        <LinearLayout
+            android:id="@+id/sdk_right_container_extend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@drawable/sdk_logo_back"
+            tools:ignore="UselessParent" >
+
+            <!-- 右扩展活动按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_right_container_activity"
+                android:layout_width="wrap_content"   
+                android:layout_height="wrap_content" 
+                 android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/sdk_iv_right_activity"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:drawableTop="@drawable/sdk_btn_activity_selector"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:text="@string/sdk_activity"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_right_activity_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+
+            <!-- 右扩展游戏按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_right_container_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+               
+                >
+
+                <TextView
+                    android:id="@+id/sdk_iv_right_game"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:drawableTop="@drawable/sdk_btn_game_selector"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/sdk_game"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_right_game_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+
+            <!-- 右扩展我按钮 -->
+
+            <FrameLayout
+                android:id="@+id/sdk_right_container_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+               
+                >
+
+                <TextView
+                    android:id="@+id/sdk_iv_right_user"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:contentDescription="@string/content_description"
+                    android:drawableTop="@drawable/sdk_btn_account_selector"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/sdk_me"
+                    android:textColor="@color/sdk_btn_text_btm_selector"
+                    android:textSize="@dimen/button_small_size"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_right_user_new"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/shape_new_activity_num_bg"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="6sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

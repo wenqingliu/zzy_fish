@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="330dp"
+        android:background="@drawable/game_grid_bg"
+        android:minHeight="@dimen/sdk_alert_dialog_height" >
+
+        <TextView
+            android:id="@+id/sdk_pwd_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/sdk_update_code"
+            android:textColor="@color/user_info_title"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/sdk_pwd_old"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/sdk_pwd_title"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sdk_dialog_input_bg"
+            android:hint="@string/sdk_input_oldcode_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:maxLength="12" 
+            android:textColor="@color/user_info_value"
+            android:textColorHint="@color/user_dialog_input_hint"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sdk_pwd_find"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/sdk_pwd_old"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/sdk_pwd_forget"
+            android:textColor="@color/user_btn_identy"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/sdk_pwd_new"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/sdk_pwd_find"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sdk_dialog_input_bg"
+            android:hint="@string/sdk_input_newcode_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:maxLength="12" 
+            android:singleLine="true"
+            android:textColor="@color/user_info_value"
+            android:textColorHint="@color/user_dialog_input_hint"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/sdk_pwd_new_again"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/sdk_pwd_new"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sdk_dialog_input_bg"
+            android:hint="@string/sdk_input_confirmcode_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:maxLength="12" 
+            android:textColor="@color/user_info_value"
+            android:textColorHint="@color/user_dialog_input_hint"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sdk_bind_btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/sdk_button_height_m"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/sdk_pwd_new_again"
+            android:layout_margin="20dp"
+            android:background="@drawable/sdk_btn_set_pwd_selector"
+            android:text="@string/sdk_cancel"
+            android:textColor="@drawable/blue"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sdk_bind_btn_ok"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/sdk_button_height_m"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/sdk_pwd_new_again"
+            android:layout_margin="20dp"
+            android:background="@drawable/sdk_btn_set_pwd_selector"
+            android:text="@string/sdk_confirm"
+            android:textColor="@drawable/gray"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</ScrollView>

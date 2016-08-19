@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_success_bg_color"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/sdk_padding_h_max"
+        android:paddingRight="@dimen/sdk_padding_h_max" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/sdk_register_success_center" >
+
+            <TextView
+                android:id="@+id/sdk_tv_register_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sdk_register_tip_height"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/register_sucess_tip"
+                android:textColor="@color/color_blue_text"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/sdk_begin_dotted_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/sdk_tv_register_tip"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/sdk_dotted_line" />
+
+            <!-- 小游能力描述 -->
+
+            <RelativeLayout
+                android:id="@+id/sdk_uassist_ability_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sdk_begin_dotted_line"
+                android:background="@color/ability_bg_color" >
+
+                <TextView
+                    android:id="@+id/sdk_tv_ability_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/uassist_ability_tip"
+                    android:textColor="@color/color_gray_text"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/sdk_iv_num_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/sdk_num_1" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_ability_tip_1"
+                    style="@style/register_success_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip"
+                    android:layout_toRightOf="@id/sdk_iv_num_1"
+                    android:text="@string/uassist_ability_1" />
+
+                <ImageView
+                    android:id="@+id/sdk_iv_num_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip_1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/sdk_num_2" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_ability_tip_2"
+                    style="@style/register_success_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip_1"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/sdk_iv_num_2"
+                    android:text="@string/uassist_ability_2" />
+
+                <ImageView
+                    android:id="@+id/sdk_iv_num_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip_2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/sdk_num_3" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_ability_tip_3"
+                    style="@style/register_success_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_tv_ability_tip_2"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/sdk_iv_num_3"
+                    android:text="@string/uassist_ability_3" />
+
+                <TextView
+                    android:id="@+id/sdk_tv_ability_end_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/sdk_tv_ability_tip_3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/uassist_ability_end_tip"
+                    android:textColor="@color/color_blue_text"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sdk_end_dotted_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/sdk_uassist_ability_description"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/sdk_dotted_line" />
+
+            <Button
+                android:id="@id/sdk_btn_confirm"
+                style="@style/common_button_solid_blue_style"
+                android:layout_height="@dimen/sdk_button_height_m"
+                android:layout_below="@id/sdk_end_dotted_line"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/sdk_confirm" />
+
+            <View
+                android:id="@+id/sdk_vi_dummy"
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_below="@id/sdk_btn_confirm" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/sdk_iv_register_header"
+            android:layout_width="fill_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sdk_register_success_header"
+            android:contentDescription="@string/content_description" />
+    </FrameLayout>
+
+</ScrollView>

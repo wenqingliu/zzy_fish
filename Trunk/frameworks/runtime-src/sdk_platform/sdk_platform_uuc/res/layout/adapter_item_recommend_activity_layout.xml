@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/activity_img"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdk_recommend_activity_img_height"
+        android:paddingTop="13dp"
+        android:contentDescription="@string/content_description"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_recomment_activity" />
+
+    <ImageView
+        android:id="@+id/icon_new_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="11dp"
+        android:contentDescription="@string/content_description"
+        android:paddingLeft="4dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_new" />
+    
+    <ImageView
+        android:id="@+id/icon_joined_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="11dp"
+        android:contentDescription="@string/content_description"
+        android:paddingLeft="4dp"
+        android:scaleType="center"
+        android:visibility="gone"
+        android:src="@drawable/icon_joined" />
+
+</RelativeLayout>

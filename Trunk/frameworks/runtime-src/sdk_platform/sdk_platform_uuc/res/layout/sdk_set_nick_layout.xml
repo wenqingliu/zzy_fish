@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/sdk_padding_h_max"
+    android:paddingRight="@dimen/sdk_padding_h_max"  >
+    
+    <TextView
+        android:id="@id/sdk_tv_error_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_dimen"
+        android:textColor="@color/color_warn_text"
+        android:textSize="@dimen/sdk_tip_size" />
+    
+    <EditText
+        android:id="@+id/sdk_et_nick_input"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/sdk_tv_error_tip"
+        android:background="@null"
+        android:hint="@string/sdk_input_nick_hint"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint_text"
+        android:textSize="18sp" 
+        android:gravity="top|left"
+        android:maxLength="15" 
+        android:layout_marginLeft="@dimen/sdk_text_margin">
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@id/sdk_btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdk_button_height_m"
+        android:layout_below="@id/sdk_et_nick_input"
+        android:layout_marginTop="@dimen/sdk_fast_reg_margin_v_max_dimen"
+        android:background="@drawable/sdk_btn_commit"
+        android:text="@string/sdk_commit"
+        android:textColor="@color/game_text_status"
+        android:textSize="20sp" /> 
+
+</RelativeLayout>
