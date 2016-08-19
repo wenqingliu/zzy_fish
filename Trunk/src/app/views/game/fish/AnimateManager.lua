@@ -93,6 +93,9 @@ function AnimateManager:loadFishAnimate(fishKind)
         local zsFrames = display.newFrames(res.."/"..res.."_zs/"..res.."_zs_%d.png", 1, 20)
         local zsAnimation = display.newAnimation(zsFrames, 1/12)
         display.setAnimationCache(fishKind.."turn", zsAnimation)
+    elseif fishKind == FishConfig.KIND.HETUN then
+        local zsFrames = display.newFrames(res.."/"..res.."_zs/"..res.."_zs_%d.png", 1, 12)
+        local zsAnimation = display.newAnimation(zsFrames, 1/12)
     end
 end
 
@@ -105,6 +108,10 @@ end
 function AnimateManager:removeFishAnimate(fishKind)
     display.removeAnimationCache(fishKind.."swim")
     display.removeAnimationCache(fishKind.."die")
+
+    if fishKind == FishConfig.KIND.QIE or fishKind == FishConfig.KIND.HETUN then
+        display.removeAnimationCache(fishKind.."turn")
+    end
 end
 
 function AnimateManager:loadAllNetAnimate()

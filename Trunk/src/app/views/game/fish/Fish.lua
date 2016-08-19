@@ -134,7 +134,7 @@ function Fish:playAnimation(animationName)
 	if animationName == "swim" then
 		-- self.sp:runAction(self.actionSwim)
 
-		if self.kind == FishConfig.KIND.QIE then --企鹅有个转身动作
+		if self.kind == FishConfig.KIND.QIE or self.kind == FishConfig.KIND.HETUN then --企鹅有个转身动作
 
 			local rand = math.random(4,10)
 			local swimAnimate = display.getAnimationCache(self.kind.."swim")
